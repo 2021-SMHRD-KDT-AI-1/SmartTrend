@@ -42,26 +42,29 @@
 				<div id="map" style="width:1200px;height: 1000px;"></div>
 				<script>
                 var HOME_PATH = window.HOME_PATH || '.';
-
+				//지도를 표시하는 부분
                 var gwangju = new naver.maps.LatLng(36.497859, 127.734243),
                     map = new naver.maps.Map('map', {
+                    	//지도의 중심좌표
                         center: gwangju.destinationPoint(0, 500),
+                        //지도의 확대 레벨
                         zoom: 8
                     }),
+                    //지도 생성
                     marker = new naver.maps.Marker({
                         map: map,
                         position: new naver.maps.LatLng(35.160037, 126.851429),
                         icon:{
 							url:HOME_PATH + "/images/marker/safe.png",
-							// url:HOME_PATH + "http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg",
-                            size: new naver.maps.Size(26 , 20),
+                            //마커 이미지 크기
+							size: new naver.maps.Size(26 , 20),
                             // size: { width: 30 , height: 15 }
                             
                             
                         }
                     });
-
-                var contentString = [
+				//인포윈도 창에 표시될 정보
+                var contentString = [ //원래 실행하면 윈도창에 표시가 안됐었는데 css 부분에 컬러값을 제어하는거 있는거 같아서 컬러값을 따로 줬더니 표시됨
                     '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
                     '   <h3 style="color : #000000">광주 현황</h3>',
                     '   <p>새 확진자 : 5 <br/>',
@@ -73,13 +76,13 @@
                     '</div>'
                 ].join('');
 
-
+				//인포윈도를 생성
                 var infowindow = new naver.maps.InfoWindow({
                     content: contentString
 
                 });
 
-
+				// 마커에 마우스오버 이벤트가 발생하면 인포윈도를 생성한다
                 naver.maps.Event.addListener(marker, "mouseover", function () {
                     infowindow.open(map, marker);
                 });
