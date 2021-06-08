@@ -141,9 +141,94 @@
                     });
                 
 				//마커 정보창에 표출될 정보
-                var contentString = [
+				// 광주 정보창
+                var contentStringGwangju = [
                     '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
                     '   <h3 style="color : #000000">광주 현황</h3>',
+                    '   <p>새 확진자 : 5 <br/>',
+                    '기존 확진자 : 235 <br/>',
+                    '거리두기 단계 : 1.5 <br/>',
+                    '영업시간 제한 : 11시 <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">코로나바이러스감염증-19(COVID-19)</a>',
+                    '   </p>',
+                    '</div>'
+                ].join('');
+				// 울산 정보창
+                var contentStringUlsan = [
+                    '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
+                    '   <h3 style="color : #000000">울산 현황</h3>',
+                    '   <p>새 확진자 : 5 <br/>',
+                    '기존 확진자 : 235 <br/>',
+                    '거리두기 단계 : 1.5 <br/>',
+                    '영업시간 제한 : 11시 <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">코로나바이러스감염증-19(COVID-19)</a>',
+                    '   </p>',
+                    '</div>'
+                ].join('');
+				// 부산 정보창
+                var contentStringBusan = [
+                    '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
+                    '   <h3 style="color : #000000">부산 현황</h3>',
+                    '   <p>새 확진자 : 5 <br/>',
+                    '기존 확진자 : 235 <br/>',
+                    '거리두기 단계 : 1.5 <br/>',
+                    '영업시간 제한 : 11시 <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">코로나바이러스감염증-19(COVID-19)</a>',
+                    '   </p>',
+                    '</div>'
+                ].join('');
+				// 대전 정보창
+                var contentStringDaejeon = [
+                    '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
+                    '   <h3 style="color : #000000">대전 현황</h3>',
+                    '   <p>새 확진자 : 5 <br/>',
+                    '기존 확진자 : 235 <br/>',
+                    '거리두기 단계 : 1.5 <br/>',
+                    '영업시간 제한 : 11시 <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">코로나바이러스감염증-19(COVID-19)</a>',
+                    '   </p>',
+                    '</div>'
+                ].join('');
+				//대구 정보창
+                var contentStringDaegu = [
+                    '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
+                    '   <h3 style="color : #000000">대구 현황</h3>',
+                    '   <p>새 확진자 : 5 <br/>',
+                    '기존 확진자 : 235 <br/>',
+                    '거리두기 단계 : 1.5 <br/>',
+                    '영업시간 제한 : 11시 <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">코로나바이러스감염증-19(COVID-19)</a>',
+                    '   </p>',
+                    '</div>'
+                ].join('');
+				// 서울 정보창
+                var contentStringSeoul = [
+                    '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
+                    '   <h3 style="color : #000000">서울 현황</h3>',
+                    '   <p>새 확진자 : 5 <br/>',
+                    '기존 확진자 : 235 <br/>',
+                    '거리두기 단계 : 1.5 <br/>',
+                    '영업시간 제한 : 11시 <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">코로나바이러스감염증-19(COVID-19)</a>',
+                    '   </p>',
+                    '</div>'
+                ].join('');
+				// 제주 정보창
+                var contentStringJeju = [
+                    '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
+                    '   <h3 style="color : #000000">제주 현황</h3>',
+                    '   <p>새 확진자 : 5 <br/>',
+                    '기존 확진자 : 235 <br/>',
+                    '거리두기 단계 : 1.5 <br/>',
+                    '영업시간 제한 : 11시 <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">코로나바이러스감염증-19(COVID-19)</a>',
+                    '   </p>',
+                    '</div>'
+                ].join('');
+				// 세종 정보창
+                var contentStringSejong = [
+                    '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
+                    '   <h3 style="color : #000000">세종 현황</h3>',
                     '   <p>새 확진자 : 5 <br/>',
                     '기존 확진자 : 235 <br/>',
                     '거리두기 단계 : 1.5 <br/>',
@@ -155,28 +240,28 @@
 
 				//마커 정보창 생성
                 var infowindow = new naver.maps.InfoWindow({
-                    content: contentString
+                    content: contentStringGwangju
                 });  
 				var infowindowUlsan = new naver.maps.InfoWindow({
-                    content: contentString
+                    content: contentStringUlsan
                 });
 				var infowindowBusan = new naver.maps.InfoWindow({
-                    content: contentString
+                    content: contentStringBusan
                 });
 				var infowindowDeajeon = new naver.maps.InfoWindow({
-                    content: contentString
+                    content: contentStringDaejeon
                 });
 				var infowindowDaegu = new naver.maps.InfoWindow({
-                    content: contentString
+                    content: contentStringDaegu
                 });
 				var infowindowSeoul = new naver.maps.InfoWindow({
-                    content: contentString
+                    content: contentStringSeoul
                 });
 				var infowindowJeju = new naver.maps.InfoWindow({
-                    content: contentString
+                    content: contentStringJeju
                 });
 				var infowindowSejong = new naver.maps.InfoWindow({
-                    content: contentString
+                    content: contentStringSejong
                 });
 
 				
@@ -190,7 +275,7 @@
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerUlsan, "mouseover", function () {
-                    infowindow.open(map, markerGwangju);
+                    infowindow.open(map, markerUlsan);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerUlsan, 'mouseout', function () {
@@ -198,7 +283,7 @@
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerBusan, "mouseover", function () {
-                    infowindow.open(map, markerGwangju);
+                    infowindow.open(map, markerBusan);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerBusan, 'mouseout', function () {
@@ -206,7 +291,7 @@
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerDaejeon, "mouseover", function () {
-                    infowindow.open(map, markerGwangju);
+                    infowindow.open(map, markerDaejeon);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerDaejeon, 'mouseout', function () {
@@ -214,7 +299,7 @@
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerDaegu, "mouseover", function () {
-                    infowindow.open(map, markerGwangju);
+                    infowindow.open(map, markerDaegu);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerDaegu, 'mouseout', function () {
@@ -222,7 +307,7 @@
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerSeoul, "mouseover", function () {
-                    infowindow.open(map, markerGwangju);
+                    infowindow.open(map, markerSeoul);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerSeoul, 'mouseout', function () {
@@ -230,7 +315,7 @@
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerJeju, "mouseover", function () {
-                    infowindow.open(map, markerGwangju);
+                    infowindow.open(map, markerJeju);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerJeju, 'mouseout', function () {
@@ -238,7 +323,7 @@
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerSejong, "mouseover", function () {
-                    infowindow.open(map, markerGwangju);
+                    infowindow.open(map, markerSejong);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerSejong, 'mouseout', function () {
