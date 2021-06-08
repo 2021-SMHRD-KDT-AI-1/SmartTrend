@@ -138,31 +138,31 @@
                 });
 
 				//마커 마우스 올릴시 마커정보창 생성
-                naver.maps.Event.addListener(marker, "mouseover", function () {
+                naver.maps.Event.addListener(markerGwangju, "mouseover", function () {
                     infowindow.open(map, marker);
                 });
 				//마커 마우스 내릴시 정보창 제거
-                naver.maps.Event.addListener(marker, 'mouseout', function () {
+                naver.maps.Event.addListener(markermarkerGwangju, 'mouseout', function () {
                     infowindow.close();
                 });
 
                 //클릭시 발생하는 이벤트를 정의
                 function getClickHandler(seq) {
                     return function (e) {
-                        var marker = markers[seq],
-                            infoWindow = infoWindows[seq];
+                        //var marker = markers[seq],
+                            //infoWindow = infoWindows[seq];
 
                         location.href = "http://127.0.0.1:5500/trip/trippage.html";
 
                     }
                 }
 
-                for (var i=0, ii=markers.length; i<ii; i++) {
-                    naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
-                }
+               // for (var i=0, ii=markers.length; i<ii; i++) {
+                  //  naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
+               //}
                  //마커에 이벤트 추가, 단 지금은 하나의 마커여서 이렇게 추가했지만 ㅇ
                 //나중에 위에 주석처리한 코드처럼 여러개의 마커에 한꺼번에 이벤트 추가할수 있음
-                naver.maps.Event.addListener(marker, 'click', getClickHandler(i));
+                naver.maps.Event.addListener(marker, 'click', getClickHandler(1));
 				</script>
 			</article>
 		</section>
