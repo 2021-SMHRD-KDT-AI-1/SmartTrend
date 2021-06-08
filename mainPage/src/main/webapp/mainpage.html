@@ -156,15 +156,92 @@
 				//마커 정보창 생성
                 var infowindow = new naver.maps.InfoWindow({
                     content: contentString
-
+                });  
+				var infowindowUlsan = new naver.maps.InfoWindow({
+                    content: contentString
+                });
+				var infowindowBusan = new naver.maps.InfoWindow({
+                    content: contentString
+                });
+				var infowindowDeajeon = new naver.maps.InfoWindow({
+                    content: contentString
+                });
+				var infowindowDaegu = new naver.maps.InfoWindow({
+                    content: contentString
+                });
+				var infowindowSeoul = new naver.maps.InfoWindow({
+                    content: contentString
+                });
+				var infowindowJeju = new naver.maps.InfoWindow({
+                    content: contentString
+                });
+				var infowindowSejong = new naver.maps.InfoWindow({
+                    content: contentString
                 });
 
+				
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerGwangju, "mouseover", function () {
                     infowindow.open(map, markerGwangju);
                 });
 				//마커 마우스 내릴시 정보창 제거
-                naver.maps.Event.addListener(markermarkerGwangju, 'mouseout', function () {
+                naver.maps.Event.addListener(markerGwangju, 'mouseout', function () {
+                    infowindow.close();
+                });
+				//마커 마우스 올릴시 마커정보창 생성
+                naver.maps.Event.addListener(markerUlsan, "mouseover", function () {
+                    infowindow.open(map, markerGwangju);
+                });
+				//마커 마우스 내릴시 정보창 제거
+                naver.maps.Event.addListener(markerUlsan, 'mouseout', function () {
+                    infowindow.close();
+                });
+				//마커 마우스 올릴시 마커정보창 생성
+                naver.maps.Event.addListener(markerBusan, "mouseover", function () {
+                    infowindow.open(map, markerGwangju);
+                });
+				//마커 마우스 내릴시 정보창 제거
+                naver.maps.Event.addListener(markerBusan, 'mouseout', function () {
+                    infowindow.close();
+                });
+				//마커 마우스 올릴시 마커정보창 생성
+                naver.maps.Event.addListener(markerDaejeon, "mouseover", function () {
+                    infowindow.open(map, markerGwangju);
+                });
+				//마커 마우스 내릴시 정보창 제거
+                naver.maps.Event.addListener(markerDaejeon, 'mouseout', function () {
+                    infowindow.close();
+                });
+				//마커 마우스 올릴시 마커정보창 생성
+                naver.maps.Event.addListener(markerDaegu, "mouseover", function () {
+                    infowindow.open(map, markerGwangju);
+                });
+				//마커 마우스 내릴시 정보창 제거
+                naver.maps.Event.addListener(markerDaegu, 'mouseout', function () {
+                    infowindow.close();
+                });
+				//마커 마우스 올릴시 마커정보창 생성
+                naver.maps.Event.addListener(markerSeoul, "mouseover", function () {
+                    infowindow.open(map, markerGwangju);
+                });
+				//마커 마우스 내릴시 정보창 제거
+                naver.maps.Event.addListener(markerSeoul, 'mouseout', function () {
+                    infowindow.close();
+                });
+				//마커 마우스 올릴시 마커정보창 생성
+                naver.maps.Event.addListener(markerJeju, "mouseover", function () {
+                    infowindow.open(map, markerGwangju);
+                });
+				//마커 마우스 내릴시 정보창 제거
+                naver.maps.Event.addListener(markerJeju, 'mouseout', function () {
+                    infowindow.close();
+                });
+				//마커 마우스 올릴시 마커정보창 생성
+                naver.maps.Event.addListener(markerSejong, "mouseover", function () {
+                    infowindow.open(map, markerGwangju);
+                });
+				//마커 마우스 내릴시 정보창 제거
+                naver.maps.Event.addListener(markerSejong, 'mouseout', function () {
                     infowindow.close();
                 });
 
