@@ -128,18 +128,7 @@
                             size: new naver.maps.Size(30 , 30),
                         }
                     });
-                   	// 세종 마커 추가
-                    markerSejong = new naver.maps.Marker({
-                        map: map,
-                        position: new naver.maps.LatLng(36.61078230504598, 127.28372922080858),
-                        icon:{
-                        	//마커 이미지
-							url:HOME_PATH + "/images/marker/good3.png",
-							//마커 이미지 크기
-                            size: new naver.maps.Size(30 , 30),
-                        }
-                    });
-                
+              
 				//마커 정보창에 표출될 정보
 				// 광주 정보창
                 var contentStringGwangju = [
@@ -225,18 +214,7 @@
                     '   </p>',
                     '</div>'
                 ].join('');
-				// 세종 정보창
-                var contentStringSejong = [
-                    '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
-                    '   <h3 style="color : #000000">세종 현황</h3>',
-                    '   <p>새 확진자 : 5 <br/>',
-                    '기존 확진자 : 235 <br/>',
-                    '거리두기 단계 : 1.5 <br/>',
-                    '영업시간 제한 : 11시 <br/>',
-                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">코로나바이러스감염증-19(COVID-19)</a>',
-                    '   </p>',
-                    '</div>'
-                ].join('');
+		
 
 				//마커 정보창 생성
                 var infowindowGwangju = new naver.maps.InfoWindow({
@@ -260,9 +238,7 @@
 				var infowindowJeju = new naver.maps.InfoWindow({
                     content: contentStringJeju
                 });
-				var infowindowSejong = new naver.maps.InfoWindow({
-                    content: contentStringSejong
-                });
+			
 
 				
 				//마커 마우스 올릴시 광주정보창 생성
@@ -321,15 +297,7 @@
                 naver.maps.Event.addListener(markerJeju, 'mouseout', function () {
                     infowindowJeju.close();
                 });
-				//마커 마우스 올릴시 세종마커정보창 생성
-                naver.maps.Event.addListener(markerSejong, "mouseover", function () {
-                    infowindowSejong.open(map, markerSejong);
-                });
-				//마커 마우스 내릴시 세종정보창 제거
-                naver.maps.Event.addListener(markerSejong, 'mouseout', function () {
-                    infowindowSejong.close();
-                });
-
+		
 				
                 //클릭시 발생하는 이벤트를 정의
                 function getClickHandler(seq) {
@@ -346,7 +314,7 @@
                naver.maps.Event.addListener(markerDaegu, 'click', getClickHandler(5));
                naver.maps.Event.addListener(markerSeoul, 'click', getClickHandler(6));
                naver.maps.Event.addListener(markerJeju, 'click', getClickHandler(7));
-               naver.maps.Event.addListener(markerSejong, 'click', getClickHandler(8));
+     
                         
                
                 			//var marker = markers[seq],
