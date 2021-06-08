@@ -330,17 +330,27 @@
                     infowindowSejong.close();
                 });
 
+				
                 //클릭시 발생하는 이벤트를 정의
-               // function getClickHandler(seq) {
-                  //  return function (e) {
-                        //var marker = markers[seq],
-                           // infoWindow = infoWindows[seq];
+                function getClickHandler(seq) {
+                    return function (e) {
 
                         location.href = "http://127.0.0.1:5500/trip/trippage.html";
 
-                    //}
-                //}
-
+                    }
+                }
+               naver.maps.Event.addListener(markerGwangju, 'click', getClickHandler(1));
+               naver.maps.Event.addListener(markerUlsan, 'click', getClickHandler(2));
+               naver.maps.Event.addListener(markerBusan, 'click', getClickHandler(3));
+               naver.maps.Event.addListener(markerDaejeon, 'click', getClickHandler(4));
+               naver.maps.Event.addListener(markerDaegu, 'click', getClickHandler(5));
+               naver.maps.Event.addListener(markerSeoul, 'click', getClickHandler(6));
+               naver.maps.Event.addListener(markerJeju, 'click', getClickHandler(7));
+               naver.maps.Event.addListener(markerSejong, 'click', getClickHandler(8));
+                        
+               
+                			//var marker = markers[seq],
+                           // infoWindow = infoWindows[seq];
 
                 //for (var i=0, ii=markers.length; i<ii; i++) {
                 //    naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
@@ -353,7 +363,7 @@
                  //마커에 이벤트 추가, 단 지금은 하나의 마커여서 이렇게 추가했지만 
 
                 //나중에 위에 주석처리한 코드처럼 여러개의 마커에 한꺼번에 이벤트 추가할수 있음
-                naver.maps.Event.addListener(markerGwangju, 'click', getClickHandler(1));
+               // naver.maps.Event.addListener(markerGwangju, 'click', getClickHandler(1));
 				</script>
 			</article>
 		</section>
