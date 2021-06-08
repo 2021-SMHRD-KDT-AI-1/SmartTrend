@@ -117,6 +117,28 @@
                             size: new naver.maps.Size(26 , 20),
                         }
                     });
+                	// 제주 마커 추가
+                    markerJeju = new naver.maps.Marker({
+                        map: map,
+                        position: new naver.maps.LatLng(33.255997839650576, 126.5601508961923),
+                        icon:{
+                        	//마커 이미지
+							url:HOME_PATH + "/images/marker/safe.png",
+							//마커 이미지 크기
+                            size: new naver.maps.Size(26 , 20),
+                        }
+                    });
+                   	// 세종 마커 추가
+                    markerSejong = new naver.maps.Marker({
+                        map: map,
+                        position: new naver.maps.LatLng(36.61078230504598, 127.28372922080858),
+                        icon:{
+                        	//마커 이미지
+							url:HOME_PATH + "/images/marker/safe.png",
+							//마커 이미지 크기
+                            size: new naver.maps.Size(26 , 20),
+                        }
+                    });
                 
 				//마커 정보창에 표출될 정보
                 var contentString = [
