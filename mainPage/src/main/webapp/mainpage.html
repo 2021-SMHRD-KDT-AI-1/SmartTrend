@@ -239,7 +239,7 @@
                 ].join('');
 
 				//마커 정보창 생성
-                var infowindow = new naver.maps.InfoWindow({
+                var infowindowGwangju = new naver.maps.InfoWindow({
                     content: contentStringGwangju
                 });  
 				var infowindowUlsan = new naver.maps.InfoWindow({
@@ -267,67 +267,67 @@
 				
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerGwangju, "mouseover", function () {
-                    infowindow.open(map, markerGwangju);
+                    infowindowGwangju.open(map, markerGwangju);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerGwangju, 'mouseout', function () {
-                    infowindow.close();
+                    infowindowGwangju.close();
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerUlsan, "mouseover", function () {
-                    infowindow.open(map, markerUlsan);
+                    infowindowUlsan.open(map, markerUlsan);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerUlsan, 'mouseout', function () {
-                    infowindow.close();
+                    infowindowUlsan.close();
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerBusan, "mouseover", function () {
-                    infowindow.open(map, markerBusan);
+                    infowindowBusan.open(map, markerBusan);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerBusan, 'mouseout', function () {
-                    infowindow.close();
+                    infowindowBusan.close();
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerDaejeon, "mouseover", function () {
-                    infowindow.open(map, markerDaejeon);
+                    infowindowDaejeon.open(map, markerDaejeon);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerDaejeon, 'mouseout', function () {
-                    infowindow.close();
+                    infowindowDaejeon.close();
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerDaegu, "mouseover", function () {
-                    infowindow.open(map, markerDaegu);
+                    infowindowDaegu.open(map, markerDaegu);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerDaegu, 'mouseout', function () {
-                    infowindow.close();
+                    infowindowDaegu.close();
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerSeoul, "mouseover", function () {
-                    infowindow.open(map, markerSeoul);
+                    infowindowSeoul.open(map, markerSeoul);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerSeoul, 'mouseout', function () {
-                    infowindow.close();
+                    infowindowSeoul.close();
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerJeju, "mouseover", function () {
-                    infowindow.open(map, markerJeju);
+                    infowindowJeju.open(map, markerJeju);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerJeju, 'mouseout', function () {
-                    infowindow.close();
+                    infowindowJeju.close();
                 });
 				//마커 마우스 올릴시 마커정보창 생성
                 naver.maps.Event.addListener(markerSejong, "mouseover", function () {
-                    infowindow.open(map, markerSejong);
+                    infowindowSejong.open(map, markerSejong);
                 });
 				//마커 마우스 내릴시 정보창 제거
                 naver.maps.Event.addListener(markerSejong, 'mouseout', function () {
-                    infowindow.close();
+                    infowindowSejong.close();
                 });
 
                 //클릭시 발생하는 이벤트를 정의
