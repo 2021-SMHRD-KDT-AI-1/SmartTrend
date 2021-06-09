@@ -10,13 +10,13 @@ public class CovidDataDAO {
 
 	public static void main(String[] args) {
 		String driver = "oracle.jdbc.OracleDriver";
-		String dbUrl = "jdbc:oracle:thin:@211.223.136.24:1521:xe";
+		String dbUrl = "jdbc:oracle:thin:@146.56.169.187:1521:xe";
 		try {
 			Class.forName(driver);
 			//System.out.println("DB Driver loading");
-			Connection con = DriverManager.getConnection(dbUrl,"hr","hr");
+			Connection con = DriverManager.getConnection(dbUrl,"smarttrand","smarttrand");
 			//System.out.println("DB Connection:" + con);
-			String sql = "SELECT day,zone,confirmedPatient,foreignImport,inQuarantine,releaseFromQuarantine FROM COVIDDATA";
+			String sql = "SELECT * FROM COVIDDATA";
 			PreparedStatement pstmt = con.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()) { 
