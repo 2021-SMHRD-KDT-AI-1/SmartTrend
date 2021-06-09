@@ -13,6 +13,10 @@ public class positiveVO {
 		this.tel = tel;
 		this.count = count;
 	}
+	
+	
+	
+	
 
 	public String getName() {
 		return name;
