@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.VO.covidDataVO;
+
 public class CovidDataDAO {
 
 	public static void main(String[] args) {
@@ -20,8 +22,8 @@ public class CovidDataDAO {
 			PreparedStatement pstmt = con.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()) { 
-				System.out.println(
-						rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getString(4)+" "+rs.getString(5)+" "+rs.getString(6));
+				covidDataVO vo = new covidDataVO(rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getString(4)+" "+rs.getString(5)+" "+rs.getString(6));
+						
 			}
 			rs.close();
 			pstmt.close();

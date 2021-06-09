@@ -15,6 +15,7 @@
 	String loc = request.getParameter("loc");
 	String locName = "";
 	
+
 	positiveFoodListDAO dao1 = new positiveFoodListDAO();
 	ArrayList<positiveVO> listFood = dao1.positiveFoodList();
 	
@@ -23,6 +24,13 @@
 	
 	PositiveattractionlistDAO dao3 = new PositiveattractionlistDAO();
 	ArrayList<positiveVO> listattraction = dao3.address();
+
+	positiveHotelListDAO dao = new positiveHotelListDAO();
+	ArrayList<positiveVO> list = dao.positiveHotelList();
+	
+	
+	 
+
 	
 	
 	if (loc.equals("Gwangju")) {
