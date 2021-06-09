@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
 <!--
 	Lens by HTML5 UP
@@ -7,7 +9,7 @@
 <html>
 
 <head>
-	<title>ì½”ë¡œë‚˜ ì²­ì •ì§€ì—­</title>
+	<title>ÄÚ·Î³ª Ã»Á¤Áö¿ª</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,8 +27,8 @@
 
 		<!-- Header -->
 		<header id="header">
-			<h1>ì²­ì •ì§€ì—­</h1>
-			<p>ì–´ë””ê°€ ìˆì„ê¹Œ??? <br><a href="http://ncov.mohw.go.kr/">ì½”ë¡œë‚˜ë°”ì´ëŸ¬ìŠ¤ê°ì—¼ì¦-19</a></p>
+			<h1>Ã»Á¤Áö¿ª</h1>
+			<p>¾îµğ°¡ ÀÖÀ»±î??? <br><a href="http://ncov.mohw.go.kr/">ÄÚ·Î³ª¹ÙÀÌ·¯½º°¨¿°Áõ-19</a></p>
 			<ul class="icons">
 				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
@@ -35,188 +37,188 @@
 			</ul>
 		</header>
 
-		<!-- Thumbnail ì§€ë„ê°€ í‘œì‹œë˜ëŠ” ë¶€ë¶„-->
+		<!-- Thumbnail Áöµµ°¡ Ç¥½ÃµÇ´Â ºÎºĞ-->
 		<section id="thumbnails">
 			<article>
 				<!-- <a class="thumbnail" href="http://127.0.0.1:5500/html5up-lens2/gwangju.html" data-position="left center"><img src="images/thumbs/01.jpg" alt="" /></a> -->
 				<div id="map" style="width:1200px;height: 1000px;"></div>
 				<script>
                 var HOME_PATH = window.HOME_PATH || '.';
-                //ì§€ë„ ìƒì„±
+                //Áöµµ »ı¼º
                 var gwangju = new naver.maps.LatLng(36.497859, 127.734243),
                     map = new naver.maps.Map('map', {
-                    	//ì§€ë„ì˜ ì¤‘ì‹¬ì¢Œí‘œ
+                    	//ÁöµµÀÇ Áß½ÉÁÂÇ¥
                         center: gwangju.destinationPoint(0, 500),
-                      	//ì§€ë„ì˜ í™•ëŒ€ ë ˆë²¨
+                      	//ÁöµµÀÇ È®´ë ·¹º§
                         zoom: 7
                     }),
-                    //ë§ˆì»¤ìƒì„±	
-                    //ê´‘ì£¼ ë§ˆì»¤ ì¶”ê°€
+                    //¸¶Ä¿»ı¼º	
+                    //±¤ÁÖ ¸¶Ä¿ Ãß°¡
                     markerGwangju = new naver.maps.Marker({
                         map: map,
                         position: new naver.maps.LatLng(35.160037, 126.851429),
                         icon:{
-                        	//ë§ˆì»¤ ì´ë¯¸ì§€
+                        	//¸¶Ä¿ ÀÌ¹ÌÁö
 							url:HOME_PATH + "/images/marker/good3.png",
-							//ë§ˆì»¤ ì´ë¯¸ì§€ í¬ê¸°
+							//¸¶Ä¿ ÀÌ¹ÌÁö Å©±â
                             size: new naver.maps.Size(30 , 30),
                         }
                     });
-                	//ìš¸ì‚° ë§ˆì»¤
+                	//¿ï»ê ¸¶Ä¿
                     markerUlsan = new naver.maps.Marker({
                         map: map,
                         position: new naver.maps.LatLng(35.53971397065472, 129.3115419833993),
                         icon:{
-                        	//ë§ˆì»¤ ì´ë¯¸ì§€
+                        	//¸¶Ä¿ ÀÌ¹ÌÁö
 							url:HOME_PATH + "/images/marker/good3.png",
-							//ë§ˆì»¤ ì´ë¯¸ì§€ í¬ê¸°
+							//¸¶Ä¿ ÀÌ¹ÌÁö Å©±â
                             size: new naver.maps.Size(30 , 30),
                         }
                     });
-                	// ë¶€ì‚° ë§ˆì»¤
+                	// ºÎ»ê ¸¶Ä¿
                     markerBusan = new naver.maps.Marker({
                         map: map,
                         position: new naver.maps.LatLng(35.17994006018334, 129.07495023492874),
                         icon:{
-                        	//ë§ˆì»¤ ì´ë¯¸ì§€
+                        	//¸¶Ä¿ ÀÌ¹ÌÁö
 							url:HOME_PATH + "/images/marker/good3.png",
-							//ë§ˆì»¤ ì´ë¯¸ì§€ í¬ê¸°
+							//¸¶Ä¿ ÀÌ¹ÌÁö Å©±â
                             size: new naver.maps.Size(30 , 30),
                         }
                     });
-                	// ëŒ€ì „ ë§ˆì»¤
+                	// ´ëÀü ¸¶Ä¿
                     markerDaejeon = new naver.maps.Marker({
                         map: map,
                         position: new naver.maps.LatLng(36.35059285100311, 127.38482426465373),
                         icon:{
-                        	//ë§ˆì»¤ ì´ë¯¸ì§€
+                        	//¸¶Ä¿ ÀÌ¹ÌÁö
 							url:HOME_PATH + "/images/marker/good3.png",
-							//ë§ˆì»¤ ì´ë¯¸ì§€ í¬ê¸°
+							//¸¶Ä¿ ÀÌ¹ÌÁö Å©±â
                             size: new naver.maps.Size(30 , 30),
                         }
                     });
-                	// ëŒ€êµ¬ ë§ˆì»¤
+                	// ´ë±¸ ¸¶Ä¿
                     markerDaegu = new naver.maps.Marker({
                         map: map,
                         position: new naver.maps.LatLng(35.871823806233884, 128.6018633083427),
                         icon:{
-                        	//ë§ˆì»¤ ì´ë¯¸ì§€
+                        	//¸¶Ä¿ ÀÌ¹ÌÁö
 							url:HOME_PATH + "/images/marker/good3.png",
-							//ë§ˆì»¤ ì´ë¯¸ì§€ í¬ê¸°
+							//¸¶Ä¿ ÀÌ¹ÌÁö Å©±â
                             size: new naver.maps.Size(30 , 30),
                         }
                     });
-                	// ì„œìš¸ ë§ˆì»¤ ì¶”ê°€
+                	// ¼­¿ï ¸¶Ä¿ Ãß°¡
                     markerSeoul = new naver.maps.Marker({
                         map: map,
                         position: new naver.maps.LatLng(37.56668151413355, 126.9781473929723),
                         icon:{
-                        	//ë§ˆì»¤ ì´ë¯¸ì§€
+                        	//¸¶Ä¿ ÀÌ¹ÌÁö
 							url:HOME_PATH + "/images/marker/good3.png",
-							//ë§ˆì»¤ ì´ë¯¸ì§€ í¬ê¸°
+							//¸¶Ä¿ ÀÌ¹ÌÁö Å©±â
                             size: new naver.maps.Size(30 , 30),
                         }
                     });
-                	// ì œì£¼ ë§ˆì»¤ ì¶”ê°€
+                	// Á¦ÁÖ ¸¶Ä¿ Ãß°¡
                     markerJeju = new naver.maps.Marker({
                         map: map,
                         position: new naver.maps.LatLng(33.255997839650576, 126.5601508961923),
                         icon:{
-                        	//ë§ˆì»¤ ì´ë¯¸ì§€
+                        	//¸¶Ä¿ ÀÌ¹ÌÁö
 							url:HOME_PATH + "/images/marker/good3.png",
-							//ë§ˆì»¤ ì´ë¯¸ì§€ í¬ê¸°
+							//¸¶Ä¿ ÀÌ¹ÌÁö Å©±â
                             size: new naver.maps.Size(30 , 30),
                         }
                     });
               
-				//ë§ˆì»¤ ì •ë³´ì°½ì— í‘œì¶œë  ì •ë³´
-				// ê´‘ì£¼ ì •ë³´ì°½
+				//¸¶Ä¿ Á¤º¸Ã¢¿¡ Ç¥ÃâµÉ Á¤º¸
+				// ±¤ÁÖ Á¤º¸Ã¢
                 var contentStringGwangju = [
                     '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
-                    '   <h3 style="color : #000000">ê´‘ì£¼ í˜„í™©</h3>',
-                    '   <p>ìƒˆ í™•ì§„ì : 5 <br/>',
-                    'ê¸°ì¡´ í™•ì§„ì : 235 <br/>',
-                    'ê±°ë¦¬ë‘ê¸° ë‹¨ê³„ : 1.5 <br/>',
-                    'ì˜ì—…ì‹œê°„ ì œí•œ : 11ì‹œ <br/>',
-                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ì½”ë¡œë‚˜ë°”ì´ëŸ¬ìŠ¤ê°ì—¼ì¦-19(COVID-19)</a>',
+                    '   <h3 style="color : #000000">±¤ÁÖ ÇöÈ²</h3>',
+                    '   <p>»õ È®ÁøÀÚ : 5 <br/>',
+                    '±âÁ¸ È®ÁøÀÚ : 235 <br/>',
+                    '°Å¸®µÎ±â ´Ü°è : 1.5 <br/>',
+                    '¿µ¾÷½Ã°£ Á¦ÇÑ : 11½Ã <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ÄÚ·Î³ª¹ÙÀÌ·¯½º°¨¿°Áõ-19(COVID-19)</a>',
                     '   </p>',
                     '</div>'
                 ].join('');
-				// ìš¸ì‚° ì •ë³´ì°½
+				// ¿ï»ê Á¤º¸Ã¢
                 var contentStringUlsan = [
                     '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
-                    '   <h3 style="color : #000000">ìš¸ì‚° í˜„í™©</h3>',
-                    '   <p>ìƒˆ í™•ì§„ì : 5 <br/>',
-                    'ê¸°ì¡´ í™•ì§„ì : 235 <br/>',
-                    'ê±°ë¦¬ë‘ê¸° ë‹¨ê³„ : 1.5 <br/>',
-                    'ì˜ì—…ì‹œê°„ ì œí•œ : 11ì‹œ <br/>',
-                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ì½”ë¡œë‚˜ë°”ì´ëŸ¬ìŠ¤ê°ì—¼ì¦-19(COVID-19)</a>',
+                    '   <h3 style="color : #000000">¿ï»ê ÇöÈ²</h3>',
+                    '   <p>»õ È®ÁøÀÚ : 5 <br/>',
+                    '±âÁ¸ È®ÁøÀÚ : 235 <br/>',
+                    '°Å¸®µÎ±â ´Ü°è : 1.5 <br/>',
+                    '¿µ¾÷½Ã°£ Á¦ÇÑ : 11½Ã <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ÄÚ·Î³ª¹ÙÀÌ·¯½º°¨¿°Áõ-19(COVID-19)</a>',
                     '   </p>',
                     '</div>'
                 ].join('');
-				// ë¶€ì‚° ì •ë³´ì°½
+				// ºÎ»ê Á¤º¸Ã¢
                 var contentStringBusan = [
                     '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
-                    '   <h3 style="color : #000000">ë¶€ì‚° í˜„í™©</h3>',
-                    '   <p>ìƒˆ í™•ì§„ì : 5 <br/>',
-                    'ê¸°ì¡´ í™•ì§„ì : 235 <br/>',
-                    'ê±°ë¦¬ë‘ê¸° ë‹¨ê³„ : 1.5 <br/>',
-                    'ì˜ì—…ì‹œê°„ ì œí•œ : 11ì‹œ <br/>',
-                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ì½”ë¡œë‚˜ë°”ì´ëŸ¬ìŠ¤ê°ì—¼ì¦-19(COVID-19)</a>',
+                    '   <h3 style="color : #000000">ºÎ»ê ÇöÈ²</h3>',
+                    '   <p>»õ È®ÁøÀÚ : 5 <br/>',
+                    '±âÁ¸ È®ÁøÀÚ : 235 <br/>',
+                    '°Å¸®µÎ±â ´Ü°è : 1.5 <br/>',
+                    '¿µ¾÷½Ã°£ Á¦ÇÑ : 11½Ã <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ÄÚ·Î³ª¹ÙÀÌ·¯½º°¨¿°Áõ-19(COVID-19)</a>',
                     '   </p>',
                     '</div>'
                 ].join('');
-				// ëŒ€ì „ ì •ë³´ì°½
+				// ´ëÀü Á¤º¸Ã¢
                 var contentStringDaejeon = [
                     '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
-                    '   <h3 style="color : #000000">ëŒ€ì „ í˜„í™©</h3>',
-                    '   <p>ìƒˆ í™•ì§„ì : 5 <br/>',
-                    'ê¸°ì¡´ í™•ì§„ì : 235 <br/>',
-                    'ê±°ë¦¬ë‘ê¸° ë‹¨ê³„ : 1.5 <br/>',
-                    'ì˜ì—…ì‹œê°„ ì œí•œ : 11ì‹œ <br/>',
-                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ì½”ë¡œë‚˜ë°”ì´ëŸ¬ìŠ¤ê°ì—¼ì¦-19(COVID-19)</a>',
+                    '   <h3 style="color : #000000">´ëÀü ÇöÈ²</h3>',
+                    '   <p>»õ È®ÁøÀÚ : 5 <br/>',
+                    '±âÁ¸ È®ÁøÀÚ : 235 <br/>',
+                    '°Å¸®µÎ±â ´Ü°è : 1.5 <br/>',
+                    '¿µ¾÷½Ã°£ Á¦ÇÑ : 11½Ã <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ÄÚ·Î³ª¹ÙÀÌ·¯½º°¨¿°Áõ-19(COVID-19)</a>',
                     '   </p>',
                     '</div>'
                 ].join('');
-				//ëŒ€êµ¬ ì •ë³´ì°½
+				//´ë±¸ Á¤º¸Ã¢
                 var contentStringDaegu = [
                     '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
-                    '   <h3 style="color : #000000">ëŒ€êµ¬ í˜„í™©</h3>',
-                    '   <p>ìƒˆ í™•ì§„ì : 5 <br/>',
-                    'ê¸°ì¡´ í™•ì§„ì : 235 <br/>',
-                    'ê±°ë¦¬ë‘ê¸° ë‹¨ê³„ : 1.5 <br/>',
-                    'ì˜ì—…ì‹œê°„ ì œí•œ : 11ì‹œ <br/>',
-                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ì½”ë¡œë‚˜ë°”ì´ëŸ¬ìŠ¤ê°ì—¼ì¦-19(COVID-19)</a>',
+                    '   <h3 style="color : #000000">´ë±¸ ÇöÈ²</h3>',
+                    '   <p>»õ È®ÁøÀÚ : 5 <br/>',
+                    '±âÁ¸ È®ÁøÀÚ : 235 <br/>',
+                    '°Å¸®µÎ±â ´Ü°è : 1.5 <br/>',
+                    '¿µ¾÷½Ã°£ Á¦ÇÑ : 11½Ã <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ÄÚ·Î³ª¹ÙÀÌ·¯½º°¨¿°Áõ-19(COVID-19)</a>',
                     '   </p>',
                     '</div>'
                 ].join('');
-				// ì„œìš¸ ì •ë³´ì°½
+				// ¼­¿ï Á¤º¸Ã¢
                 var contentStringSeoul = [
                     '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
-                    '   <h3 style="color : #000000">ì„œìš¸ í˜„í™©</h3>',
-                    '   <p>ìƒˆ í™•ì§„ì : 5 <br/>',
-                    'ê¸°ì¡´ í™•ì§„ì : 235 <br/>',
-                    'ê±°ë¦¬ë‘ê¸° ë‹¨ê³„ : 1.5 <br/>',
-                    'ì˜ì—…ì‹œê°„ ì œí•œ : 11ì‹œ <br/>',
-                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ì½”ë¡œë‚˜ë°”ì´ëŸ¬ìŠ¤ê°ì—¼ì¦-19(COVID-19)</a>',
+                    '   <h3 style="color : #000000">¼­¿ï ÇöÈ²</h3>',
+                    '   <p>»õ È®ÁøÀÚ : 5 <br/>',
+                    '±âÁ¸ È®ÁøÀÚ : 235 <br/>',
+                    '°Å¸®µÎ±â ´Ü°è : 1.5 <br/>',
+                    '¿µ¾÷½Ã°£ Á¦ÇÑ : 11½Ã <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ÄÚ·Î³ª¹ÙÀÌ·¯½º°¨¿°Áõ-19(COVID-19)</a>',
                     '   </p>',
                     '</div>'
                 ].join('');
-				// ì œì£¼ ì •ë³´ì°½
+				// Á¦ÁÖ Á¤º¸Ã¢
                 var contentStringJeju = [
                     '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
-                    '   <h3 style="color : #000000">ì œì£¼ í˜„í™©</h3>',
-                    '   <p>ìƒˆ í™•ì§„ì : 5 <br/>',
-                    'ê¸°ì¡´ í™•ì§„ì : 235 <br/>',
-                    'ê±°ë¦¬ë‘ê¸° ë‹¨ê³„ : 1.5 <br/>',
-                    'ì˜ì—…ì‹œê°„ ì œí•œ : 11ì‹œ <br/>',
-                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ì½”ë¡œë‚˜ë°”ì´ëŸ¬ìŠ¤ê°ì—¼ì¦-19(COVID-19)</a>',
+                    '   <h3 style="color : #000000">Á¦ÁÖ ÇöÈ²</h3>',
+                    '   <p>»õ È®ÁøÀÚ : 5 <br/>',
+                    '±âÁ¸ È®ÁøÀÚ : 235 <br/>',
+                    '°Å¸®µÎ±â ´Ü°è : 1.5 <br/>',
+                    '¿µ¾÷½Ã°£ Á¦ÇÑ : 11½Ã <br/>',
+                    '   <a href="http://ncov.mohw.go.kr/" target="_blank">ÄÚ·Î³ª¹ÙÀÌ·¯½º°¨¿°Áõ-19(COVID-19)</a>',
                     '   </p>',
                     '</div>'
                 ].join('');
 		
 
-				//ë§ˆì»¤ ì •ë³´ì°½ ìƒì„±
+				//¸¶Ä¿ Á¤º¸Ã¢ »ı¼º
                 var infowindowGwangju = new naver.maps.InfoWindow({
                     content: contentStringGwangju
                 });  
@@ -241,98 +243,98 @@
 			
 
 				
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ì˜¬ë¦´ì‹œ ê´‘ì£¼ì •ë³´ì°½ ìƒì„±
+				//¸¶Ä¿ ¸¶¿ì½º ¿Ã¸±½Ã ±¤ÁÖÁ¤º¸Ã¢ »ı¼º
                 naver.maps.Event.addListener(markerGwangju, "mouseover", function () {
                     infowindowGwangju.open(map, markerGwangju);
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ë‚´ë¦´ì‹œ ê´‘ì£¼ì •ë³´ì°½ ì œê±°
+				//¸¶Ä¿ ¸¶¿ì½º ³»¸±½Ã ±¤ÁÖÁ¤º¸Ã¢ Á¦°Å
                 naver.maps.Event.addListener(markerGwangju, 'mouseout', function () {
                     infowindowGwangju.close();
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ì˜¬ë¦´ì‹œ ìš¸ì‚°ë§ˆì»¤ì •ë³´ì°½ ìƒì„±
+				//¸¶Ä¿ ¸¶¿ì½º ¿Ã¸±½Ã ¿ï»ê¸¶Ä¿Á¤º¸Ã¢ »ı¼º
                 naver.maps.Event.addListener(markerUlsan, "mouseover", function () {
                     infowindowUlsan.open(map, markerUlsan);
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ë‚´ë¦´ì‹œ ìš¸ì‚°ì •ë³´ì°½ ì œê±°
+				//¸¶Ä¿ ¸¶¿ì½º ³»¸±½Ã ¿ï»êÁ¤º¸Ã¢ Á¦°Å
                 naver.maps.Event.addListener(markerUlsan, 'mouseout', function () {
                     infowindowUlsan.close();
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ì˜¬ë¦´ì‹œ ë¶€ì‚°ë§ˆì»¤ì •ë³´ì°½ ìƒì„±
+				//¸¶Ä¿ ¸¶¿ì½º ¿Ã¸±½Ã ºÎ»ê¸¶Ä¿Á¤º¸Ã¢ »ı¼º
                 naver.maps.Event.addListener(markerBusan, "mouseover", function () {
                     infowindowBusan.open(map, markerBusan);
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ë‚´ë¦´ì‹œ ë¶€ì‚°ì •ë³´ì°½ ì œê±°
+				//¸¶Ä¿ ¸¶¿ì½º ³»¸±½Ã ºÎ»êÁ¤º¸Ã¢ Á¦°Å
                 naver.maps.Event.addListener(markerBusan, 'mouseout', function () {
                     infowindowBusan.close();
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ì˜¬ë¦´ì‹œ ëŒ€ì „ë§ˆì»¤ì •ë³´ì°½ ìƒì„±
+				//¸¶Ä¿ ¸¶¿ì½º ¿Ã¸±½Ã ´ëÀü¸¶Ä¿Á¤º¸Ã¢ »ı¼º
                 naver.maps.Event.addListener(markerDaejeon, "mouseover", function () {
                     infowindowDaejeon.open(map, markerDaejeon);
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ë‚´ë¦´ì‹œ ëŒ€ì „ì •ë³´ì°½ ì œê±°
+				//¸¶Ä¿ ¸¶¿ì½º ³»¸±½Ã ´ëÀüÁ¤º¸Ã¢ Á¦°Å
                 naver.maps.Event.addListener(markerDaejeon, 'mouseout', function () {
                     infowindowDaejeon.close();
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ì˜¬ë¦´ì‹œ ëŒ€êµ¬ë§ˆì»¤ì •ë³´ì°½ ìƒì„±
+				//¸¶Ä¿ ¸¶¿ì½º ¿Ã¸±½Ã ´ë±¸¸¶Ä¿Á¤º¸Ã¢ »ı¼º
                 naver.maps.Event.addListener(markerDaegu, "mouseover", function () {
                     infowindowDaegu.open(map, markerDaegu);
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ë‚´ë¦´ì‹œ ëŒ€êµ¬ì •ë³´ì°½ ì œê±°
+				//¸¶Ä¿ ¸¶¿ì½º ³»¸±½Ã ´ë±¸Á¤º¸Ã¢ Á¦°Å
                 naver.maps.Event.addListener(markerDaegu, 'mouseout', function () {
                     infowindowDaegu.close();
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ì˜¬ë¦´ì‹œ ì„œìš¸ë§ˆì»¤ì •ë³´ì°½ ìƒì„±
+				//¸¶Ä¿ ¸¶¿ì½º ¿Ã¸±½Ã ¼­¿ï¸¶Ä¿Á¤º¸Ã¢ »ı¼º
                 naver.maps.Event.addListener(markerSeoul, "mouseover", function () {
                     infowindowSeoul.open(map, markerSeoul);
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ë‚´ë¦´ì‹œ ì„œìš¸ì •ë³´ì°½ ì œê±°
+				//¸¶Ä¿ ¸¶¿ì½º ³»¸±½Ã ¼­¿ïÁ¤º¸Ã¢ Á¦°Å
                 naver.maps.Event.addListener(markerSeoul, 'mouseout', function () {
                     infowindowSeoul.close();
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ì˜¬ë¦´ì‹œ ì œì£¼ë§ˆì»¤ì •ë³´ì°½ ìƒì„±
+				//¸¶Ä¿ ¸¶¿ì½º ¿Ã¸±½Ã Á¦ÁÖ¸¶Ä¿Á¤º¸Ã¢ »ı¼º
                 naver.maps.Event.addListener(markerJeju, "mouseover", function () {
                     infowindowJeju.open(map, markerJeju);
                 });
-				//ë§ˆì»¤ ë§ˆìš°ìŠ¤ ë‚´ë¦´ì‹œ ì œì£¼ì •ë³´ì°½ ì œê±°
+				//¸¶Ä¿ ¸¶¿ì½º ³»¸±½Ã Á¦ÁÖÁ¤º¸Ã¢ Á¦°Å
                 naver.maps.Event.addListener(markerJeju, 'mouseout', function () {
                     infowindowJeju.close();
                 });
 		
 				
-                //í´ë¦­ì‹œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸ë¥¼ ì •ì˜
+                //Å¬¸¯½Ã ¹ß»ıÇÏ´Â ÀÌº¥Æ®¸¦ Á¤ÀÇ
                 function getClickHandlerGw(seq) {
                     return function (e) {
-                    	location.href = "subpage.jsp?loc=Gwangju";
+                    	location.href = "subpage.jsp?loc='gwangju'";
                     }
                 }
                 function getClickHandlerUl(seq) {
                     return function (e) {
-                    	location.href = "subpage.jsp?loc=Ulsan";
+                    	location.href = "trippage.html?loc=Ulsan";
                     }
                 }
                 function getClickHandlerBu(seq) {
                     return function (e) {
-                    	location.href = "subpage.jsp?loc=Busan";
+                    	location.href = "trippage.html?loc=Busan";
                     }
                 }
                 function getClickHandlerDj(seq) {
                     return function (e) {
-                    	location.href = "subpage.jsp?loc=Daejeon";
+                    	location.href = "trippage.html?loc=Daejeon";
                     }
                 }
                 function getClickHandlerDg(seq) {
                     return function (e) {
-                    	location.href = "subpage.jsp?loc=Daegu";
+                    	location.href = "trippage.html?loc=Daegu";
                     }
                 }
                 function getClickHandlerSe(seq) {
                     return function (e) {
-                    	location.href = "subpage.jsp?loc=Seoul";
+                    	location.href = "trippage.html?loc=Seoul";
                     }
                 }
                 function getClickHandlerJe(seq) {
                     return function (e) {
-                    	location.href = "subpage.jsp?loc=Jeju";
+                    	location.href = "trippage.html?loc=Jeju";
                     }
                 }
                naver.maps.Event.addListener(markerGwangju, 'click', getClickHandlerGw());
@@ -351,14 +353,14 @@
                 //for (var i=0, ii=markers.length; i<ii; i++) {
                 //    naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
               // }
-                 //ë§ˆì»¤ì— ì´ë²¤íŠ¸ ì¶”ê°€, ë‹¨ ì§€ê¸ˆì€ í•˜ë‚˜ì˜ ë§ˆì»¤ì—¬ì„œ ì´ë ‡ê²Œ ì¶”ê°€í–ˆì§€ë§Œ 
+                 //¸¶Ä¿¿¡ ÀÌº¥Æ® Ãß°¡, ´Ü Áö±İÀº ÇÏ³ªÀÇ ¸¶Ä¿¿©¼­ ÀÌ·¸°Ô Ãß°¡ÇßÁö¸¸ 
 
                 //for (var i=0, ii=markers.length; i<ii; i++) {
                    // naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
               //  }
-                 //ë§ˆì»¤ì— ì´ë²¤íŠ¸ ì¶”ê°€, ë‹¨ ì§€ê¸ˆì€ í•˜ë‚˜ì˜ ë§ˆì»¤ì—¬ì„œ ì´ë ‡ê²Œ ì¶”ê°€í–ˆì§€ë§Œ 
+                 //¸¶Ä¿¿¡ ÀÌº¥Æ® Ãß°¡, ´Ü Áö±İÀº ÇÏ³ªÀÇ ¸¶Ä¿¿©¼­ ÀÌ·¸°Ô Ãß°¡ÇßÁö¸¸ 
 
-                //ë‚˜ì¤‘ì— ìœ„ì— ì£¼ì„ì²˜ë¦¬í•œ ì½”ë“œì²˜ëŸ¼ ì—¬ëŸ¬ê°œì˜ ë§ˆì»¤ì— í•œêº¼ë²ˆì— ì´ë²¤íŠ¸ ì¶”ê°€í• ìˆ˜ ìˆìŒ
+                //³ªÁß¿¡ À§¿¡ ÁÖ¼®Ã³¸®ÇÑ ÄÚµåÃ³·³ ¿©·¯°³ÀÇ ¸¶Ä¿¿¡ ÇÑ²¨¹ø¿¡ ÀÌº¥Æ® Ãß°¡ÇÒ¼ö ÀÖÀ½
                // naver.maps.Event.addListener(markerGwangju, 'click', getClickHandler(1));
 				</script>
 			</article>
