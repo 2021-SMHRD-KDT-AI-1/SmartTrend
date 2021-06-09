@@ -14,7 +14,10 @@
 	String locName = "";
 	
 	positiveHotelListDAO dao = new positiveHotelListDAO();
-	ArrayList<positiveVO> list = list = dao.positiveHotelList();
+	ArrayList<positiveVO> list = dao.positiveHotelList();
+	
+	
+	 
 	
 	
 	if (loc.equals("Gwangju")) {
