@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.VO.positiveVO"%>
+<%@page import="com.DAO.positiveHotelListDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -9,7 +12,11 @@
 <%
 	String loc = request.getParameter("loc");
 	String locName = "";
-			
+	
+	positiveHotelListDAO dao = new positiveHotelListDAO();
+	ArrayList<positiveVO> list = list = dao.positiveHotelList();
+	
+	
 	if (loc.equals("Gwangju")) {
 		locName = "광주";
 	} else if (loc.equals("Ulsan")) {
@@ -80,12 +87,12 @@
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
 						</div>
-						<% for (int i=0; i<5; i++) { %>
+						<% for (int i=0; i<list.size(); i++) { %>
 						<section>
 							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>에버랜드 <span>추천수: 8000</span></h2>
+									<h2><%=list.get(i).getName() %> <span>추천수: 8000</span></h2>
 									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
 									<ul class="actions">
 										<li><a href="detailpage.jsp?a=ajshd&?a=asgdh&" class="button">Learn more</a></li>
@@ -106,12 +113,12 @@
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
 						</div>
-						<% for (int i=0; i<5; i++) { %>
+						<% for (int i=0; i<list.size(); i++) { %>
 						<section>
 							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Sed ipsum dolor</h2>
+									<h2><%=list.get(i).getName()%></h2>
 									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
@@ -132,12 +139,12 @@
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
 						</div>
-						<% for (int i=0; i<5; i++) { %>
+						<% for (int i=0; i<list.size(); i++) { %>
 						<section>
 							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Sed ipsum dolor</h2>
+									<h2><%=list.get(i).getName()%></h2>
 									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
