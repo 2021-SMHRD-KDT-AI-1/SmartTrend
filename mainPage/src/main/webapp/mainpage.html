@@ -300,20 +300,48 @@
 		
 				
                 //클릭시 발생하는 이벤트를 정의
-                function getClickHandler(seq) {
+                function getClickHandlerGw(seq) {
                     return function (e) {
-
-                        location.href = "trippage.html?loc=gwangju";
-
+                    	location.href = "trippage.html?loc=gwangju";
                     }
                 }
-               naver.maps.Event.addListener(markerGwangju, 'click', getClickHandler(1));
-               naver.maps.Event.addListener(markerUlsan, 'click', getClickHandler(2));
-               naver.maps.Event.addListener(markerBusan, 'click', getClickHandler(3));
-               naver.maps.Event.addListener(markerDaejeon, 'click', getClickHandler(4));
-               naver.maps.Event.addListener(markerDaegu, 'click', getClickHandler(5));
-               naver.maps.Event.addListener(markerSeoul, 'click', getClickHandler(6));
-               naver.maps.Event.addListener(markerJeju, 'click', getClickHandler(7));
+                function getClickHandlerUl(seq) {
+                    return function (e) {
+                    	location.href = "trippage.html?loc=Ulsan";
+                    }
+                }
+                function getClickHandlerBu(seq) {
+                    return function (e) {
+                    	location.href = "trippage.html?loc=Busan";
+                    }
+                }
+                function getClickHandlerDj(seq) {
+                    return function (e) {
+                    	location.href = "trippage.html?loc=Daejeon";
+                    }
+                }
+                function getClickHandlerDg(seq) {
+                    return function (e) {
+                    	location.href = "trippage.html?loc=Daegu";
+                    }
+                }
+                function getClickHandlerSe(seq) {
+                    return function (e) {
+                    	location.href = "trippage.html?loc=Seoul";
+                    }
+                }
+                function getClickHandlerJe(seq) {
+                    return function (e) {
+                    	location.href = "trippage.html?loc=Jeju";
+                    }
+                }
+               naver.maps.Event.addListener(markerGwangju, 'click', getClickHandlerGw());
+               naver.maps.Event.addListener(markerUlsan, 'click', getClickHandlerUl());
+               naver.maps.Event.addListener(markerBusan, 'click', getClickHandlerBu());
+               naver.maps.Event.addListener(markerDaejeon, 'click', getClickHandlerDj());
+               naver.maps.Event.addListener(markerDaegu, 'click', getClickHandlerDg());
+               naver.maps.Event.addListener(markerSeoul, 'click', getClickHandlerSe());
+               naver.maps.Event.addListener(markerJeju, 'click', getClickHandlerJe());
      
                         
                
