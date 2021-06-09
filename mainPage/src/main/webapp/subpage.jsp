@@ -88,7 +88,7 @@
 									<h2>에버랜드 <span>추천수: 8000</span></h2>
 									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+										<li><a href="detailpage.jsp?a=ajshd&?a=asgdh&" class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>
