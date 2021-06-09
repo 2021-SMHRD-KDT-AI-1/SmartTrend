@@ -13,8 +13,7 @@ import java.sql.DriverManager;
 
 
 
-public class addressDAO {
-	
+public class PositiveattractionlistDAO {
 	public ArrayList<positiveVO> address() {
 		String driver = "oracle.jdbc.OracleDriver";
 		String dbUrl = "jdbc:oracle:thin:@146.56.169.187:1521:xe";
@@ -32,7 +31,7 @@ public class addressDAO {
 			while(rs.next()) { 
 				positiveVO vo = new positiveVO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
 				list.add(vo);
-				
+
 				
 			}
 			rs.close();
