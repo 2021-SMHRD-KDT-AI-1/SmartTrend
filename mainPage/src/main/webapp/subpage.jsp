@@ -105,7 +105,7 @@
 						</div>
 						<% for (int i=0; i<listFood.size(); i++) { %>
 						<section>
-							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="images/foodMain/Main"+<%=i>+".jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2><%=listFood.get(i).getName() %></h2>
