@@ -91,6 +91,7 @@
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
 						</div>
+						<div id="intro-bg"></div>
 					</section>
 
 				<!-- One -->
