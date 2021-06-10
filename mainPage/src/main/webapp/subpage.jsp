@@ -105,7 +105,6 @@
 						</div>
 						<% for (int i=0; i<listFood.size(); i++) { %>
 						<section>
-							<!--  <a href="#" class="image"><img src="images/foodMain/dailyMain.jpg" alt="" data-position="center center" /></a>-->
 							<a href="#" class="image"><img src="<%=listFood.get(i).getFile() %>" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
@@ -136,7 +135,7 @@
 						</div>
 						<% for (int i=0; i<listattraction.size(); i++) { %>
 						<section>
-							<a href="#" class="image"></a>
+							<a href="#" class="image"><img src="<%=listattraction.get(i).getFile() %>" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2><%=listattraction.get(i).getName()%></h2>
@@ -145,7 +144,10 @@
 									<p><%=listattraction.get(i).getCount() %></p>
 									
 									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+<<<<<<< HEAD
+=======
 									 
+>>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-1/SmartTrend.git
 										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %> "class="button">Learn more</a></li>
 									</ul>
 								</div>
@@ -166,7 +168,7 @@
 						</div>
 						<% for (int i=0; i<listHotel.size(); i++) { %>
 						<section>
-							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="<%=listHotel.get(i).getFile() %>" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2><%=listHotel.get(i).getName()%></h2>

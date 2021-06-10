@@ -30,9 +30,20 @@ public class PositiveattractionlistDAO {
 			
 			while(rs.next()) { 
 				positiveVO vo = new positiveVO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
+				String name = rs.getString(1);
+				if(name.equals("양동시장")) {
+					vo.setFile("images/attractionMain/ydmarketMain.jpg");
+				}
+				else if(name.equals("기분좋은극장")) {
+					vo.setFile("images/attractionMain/pleasanttheaterMain.jpg");
+				}
+				else if(name.equals("증심사")) {
+					vo.setFile("images/attractionMain/jeungsimsatempleMain.jpg");
+				}
+				else if(name.equals("광주패밀리랜드")) {
+					vo.setFile("images/attractionMain/gwangjufamilylandMain.jpg");
+				}
 				list.add(vo);
-
-				
 			}
 			rs.close();
 			pstmt.close();
