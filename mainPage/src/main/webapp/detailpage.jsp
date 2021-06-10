@@ -25,7 +25,9 @@
 			
 			String blog[] = new String[5];
 	
-			
+			String image[] = new String[6];
+			String image2[] = new String[6];
+			String image3[] = new String[6];
 					
 			ArrayList<positiveVO> list = null;
 			
@@ -71,6 +73,18 @@
 				blog[1] = "https://blog.naver.com/dreamsumin/221597073278";
 				blog[2] = "https://blog.naver.com/bowoon0421/222378662155";
 				blog[3] = "https://blog.naver.com/shalala1982/222379443275";
+				
+				// 명소 이미지
+				image[0] = "images/attractionMain/ydmarketMain.jpg";
+				image[1] = "images/attractionMain/pleasanttheaterMain.jpg";
+				image[2] = "images/attractionMain/jeungsimsatempleMain.jpg";
+				image[3] = "images/attractionMain/gwangjufamilylandMain.jpg";
+				
+				// 명소2 이미지
+				image2[0] = "";
+				
+				// 명소3 이미지 
+				image3[0] = "";
 				
 			} else if(loc.equals("hotel")) {
 				positiveHotelListDAO dao = new positiveHotelListDAO();
@@ -131,7 +145,7 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major"><%=list.get(index).getName()%></h1>
-							<span class="image fit"><img src="trip/images/pic04.jpg" alt="" /></span><br>
+							<span class="image fit"><img src="<%=image[index] %>" alt="" /></span><br>
 							<div style="width:500px; height:200px; border:1px solid red; float:left; margin-right:100px;">
 							첫번째 영역:
 							왼쪽에 위치시킴 =>  float:left
