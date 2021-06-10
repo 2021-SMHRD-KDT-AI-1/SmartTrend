@@ -1,3 +1,5 @@
+<%@page import="com.DAO.PositiveattractionlistDAO"%>
+<%@page import="com.DAO.positiveFoodListDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.VO.positiveVO"%>
 <%@page import="com.DAO.positiveHotelListDAO"%>
@@ -13,8 +15,22 @@
 	String loc = request.getParameter("loc");
 	String locName = "";
 	
+
+	positiveFoodListDAO dao1 = new positiveFoodListDAO();
+	ArrayList<positiveVO> listFood = dao1.positiveFoodList();
+	
+	positiveHotelListDAO dao2 = new positiveHotelListDAO();
+	ArrayList<positiveVO> listHotel = dao2.positiveHotelList();
+	
+	PositiveattractionlistDAO dao3 = new PositiveattractionlistDAO();
+	ArrayList<positiveVO> listattraction = dao3.address();
+
 	positiveHotelListDAO dao = new positiveHotelListDAO();
-	ArrayList<positiveVO> list = list = dao.positiveHotelList();
+	ArrayList<positiveVO> list = dao.positiveHotelList();
+	
+	
+	 
+
 	
 	
 	if (loc.equals("Gwangju")) {
@@ -87,13 +103,15 @@
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
 						</div>
-						<% for (int i=0; i<list.size(); i++) { %>
+						<% for (int i=0; i<listFood.size(); i++) { %>
 						<section>
 							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2><%=list.get(i).getName() %> <span>추천수: 8000</span></h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2><%=listFood.get(i).getName() %></h2>
+									<p><%=listFood.get(i).getAddress() %></p>
+									<p><%=listFood.get(i).getTel() %></p>
+									<p><%=listFood.get(i).getCount() %></p>
 									<ul class="actions">
 										<li><a href="detailpage.jsp?a=ajshd&?a=asgdh&" class="button">Learn more</a></li>
 									</ul>
@@ -104,6 +122,7 @@
 					</section>
 
 				<!-- Two -->
+				    
 					<section id="two" class="wrapper style2 spotlights sectionM">
 						<div class="inner">
 							<h1>명소</h1>
@@ -113,12 +132,16 @@
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
 						</div>
-						<% for (int i=0; i<list.size(); i++) { %>
+						<% for (int i=0; i<listattraction.size(); i++) { %>
 						<section>
 							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2><%=list.get(i).getName()%></h2>
+									<h2><%=listattraction.get(i).getName()%></h2>
+									<p><%=listattraction.get(i).getAddress() %></p>
+									<p><%=listattraction.get(i).getTel() %></p>
+									<p><%=listattraction.get(i).getCount() %></p>
+									
 									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
@@ -139,12 +162,17 @@
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
 						</div>
-						<% for (int i=0; i<list.size(); i++) { %>
+						<% for (int i=0; i<listHotel.size(); i++) { %>
 						<section>
 							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2><%=list.get(i).getName()%></h2>
+									<h2><%=listHotel.get(i).getName()%></h2>
+									<p><%=listHotel.get(i).getAddress() %></p>
+									<p><%=listHotel.get(i).getTel() %></p>
+									<p><%=listHotel.get(i).getCount() %></p>
+									
+									
 									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
