@@ -14,27 +14,82 @@
 
 <%
 			int index = Integer.parseInt(request.getParameter("index"));
-			
+			String loc = request.getParameter("loc");
 			
 			double locationX[] = new double[5];
 			double locationY[] = new double[5];
 			
-			locationX[0] = 35.15439714024425;
-			locationY[0] = 126.90131769024425;
-					
+			String blog[] = new String[5];
+	
 			
-			if(index==0) {
-			positiveFoodListDAO dao = new positiveFoodListDAO();
-			ArrayList<positiveVO> list = dao.positiveFoodList();
-			} else if(index==1) {
-			positiveHotelListDAO dao = new positiveHotelListDAO();
-			ArrayList<positiveVO> list = dao.positiveHotelList();
-			} else if(index==2) {
-			PositiveattractionlistDAO dao = new PositiveattractionlistDAO();
-			ArrayList<positiveVO> list = dao.address();
-			} else if(index==3) {
-			positiveHotelListDAO dao = new positiveHotelListDAO();
-			ArrayList<positiveVO> list = dao.positiveHotelList();
+					
+			ArrayList<positiveVO> list = null;
+			
+			// learn more 버튼 누르면 그 지역 정보 나오게 하는 조건문
+			if(loc.equals("food")) {
+				positiveFoodListDAO dao = new positiveFoodListDAO();
+				list = dao.positiveFoodList();
+				//맛집 좌표
+				locationX[0] = 35.125015723818684;
+				locationY[0] = 126.90928834228104;
+				locationX[1] = 35.15420799879157;
+				locationY[1] = 126.8761462759716;
+				locationX[2] = 35.17141486496733;
+				locationY[2] = 126.86900923423421;
+				locationX[3] = 35.1509789371583;
+				locationY[3] = 126.89386771339359;
+				locationX[4] = 35.15636268032151;
+				locationY[4] = 126.85969999814591;
+				
+				//맛집 블로그 링크
+				blog[0] = "https://m.blog.naver.com/ekwjd3011/222336048232";
+				blog[1] = "https://m.blog.naver.com/incanto96/221780248786";
+				blog[2] = "https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=flyhigh3010&logNo=221373346804";
+				blog[3] = "https://m.blog.naver.com/korea0313/221962185290";
+				blog[4] = "https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=cumicoomi&logNo=220632897223";
+				
+			} else if(loc.equals("attr")) {
+				PositiveattractionlistDAO dao = new PositiveattractionlistDAO();
+				list = dao.address();
+				
+				//명소 좌표
+				locationX[0] = 35.15434206635804;
+				locationY[0] = 126.9013176925811;
+				locationX[1] = 35.15487007701321;
+				locationY[1] = 126.84892042046563;
+				locationX[2] = 35.12879783382397;
+				locationY[2] = 126.97014829557247;
+				locationX[3] = 35.22369320729583;
+				locationY[3] = 126.89161221369756;
+				
+				// 명소 블로그 링크
+				blog[0] = "https://blog.naver.com/dmswkdi1/222259630651";
+				blog[1] = "https://blog.naver.com/dreamsumin/221597073278";
+				blog[2] = "https://blog.naver.com/bowoon0421/222378662155";
+				blog[3] = "https://blog.naver.com/shalala1982/222379443275";
+				
+			} else if(loc.equals("hotel")) {
+				positiveHotelListDAO dao = new positiveHotelListDAO();
+				list = dao.positiveHotelList();
+				
+				// 호텔 좌표
+				locationX[0] = 35.143950860135895;
+				locationY[0] = 126.91655902709476;
+				locationX[1] = 35.14476014687259;
+				locationY[1] = 126.91575039599986;
+				locationX[2] = 35.22072814012051;
+				locationY[2] = 126.85319517529469;
+				locationX[3] = 35.16209088602493;
+				locationY[3] = 126.9187290433647;
+				locationX[4] = 35.14996032263111;
+				locationY[4] = 126.85075724087294;
+				
+				// 호텔 블로그 링크
+				blog[0] = "https://www.goodchoice.kr/product/detail?ano=2780";
+				blog[1] = "https://blog.naver.com/seoyujin0706/221734495450";
+				blog[2] = "https://blog.naver.com/lovee4789/222265500311";
+				blog[3] = "https://blog.naver.com/oozt6/221542841015";
+				blog[4] = "https://blog.naver.com/4896630/222074677258";
 			}
 			
 			
@@ -71,10 +126,24 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major"><%=list.get(index).getName()%></h1>
-							<span class="image fit"><img src="trip/images/pic04.jpg" alt="" /></span>
-							<p>링크</p>
-							<p>지도</p>
-							<p><%=list.get(index).getName()%></p>
+							<span class="image fit"><img src="trip/images/pic04.jpg" alt="" /></span><br>
+							<div style="width:500px; height:150px; border:1px solid red; float:left; margin-right:100px;">
+							첫번째 영역:
+							왼쪽에 위치시킴 =>  float:left
+							오른쪽에 바깥여백을 줌 =>  margin-right:10px;
+							여기에 그림이나 글자 또는 광고 등을 넣음
+							</div>
+							<div style="width:500px; height:150px; border:1px solid green; float:left;">
+							두번째 영역:
+							첫번째 영역 옆에 나란히 붙임 => float:left
+							여기에 그림이나 글자 또는 광고 등을 넣음
+							</div>
+							<br>
+							<div>
+							<big><b><a href= <%=blog[index] %>><%=list.get(index).getName()%>에 관한 정보를 더 보시려면?</a></b></big>
+							<br>
+							<br>
+							</div>
 							<div id="map" style="width:1040px;height: 388px;"></div>
 							<script>
 							var HOME_PATH = window.HOME_PATH || '.';

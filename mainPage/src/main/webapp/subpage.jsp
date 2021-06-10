@@ -97,8 +97,7 @@
 					<section id="one" class="wrapper style2 spotlights fade-up sectionM">
 						<div class="inner">
 							<h1>맛집</h1>
-							<p>Just another fine responsive site template designed by <a href="http://html5up.net">HTML5 UP</a><br />
-							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p>
+							<p>여기에 아무거나 집어넣어도 되고 삭제해도 되는 태그 <!--<a href="http://html5up.net/license">Creative Commons</a>.--></p>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
@@ -111,9 +110,9 @@
 									<h2><%=listFood.get(i).getName() %></h2>
 									<p><%=listFood.get(i).getAddress() %></p>
 									<p><%=listFood.get(i).getTel() %></p>
-									<p><%=listFood.get(i).getCount() %></p>
+									<big><b><p><%=listFood.get(i).getCount() %> (추천수) </p></b></big>
 									<ul class="actions">
-										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %>" class="button">Learn more</a></li>
+										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %>&loc=food" class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>
@@ -126,8 +125,7 @@
 					<section id="two" class="wrapper style2 spotlights sectionM">
 						<div class="inner">
 							<h1>명소</h1>
-							<p>Just another fine responsive site template designed by <a href="http://html5up.net">HTML5 UP</a><br />
-							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p>
+							<p>여기에 아무거나 집어넣어도 되고 삭제해도 되는 태그 <!--<a href="http://html5up.net/license">Creative Commons</a>.--></p>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
@@ -140,11 +138,9 @@
 									<h2><%=listattraction.get(i).getName()%></h2>
 									<p><%=listattraction.get(i).getAddress() %></p>
 									<p><%=listattraction.get(i).getTel() %></p>
-									<p><%=listattraction.get(i).getCount() %></p>
-									
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<big><b><p><%=listattraction.get(i).getCount() %> (추천수) </p></b></big>
 									<ul class="actions">
-										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %> "class="button">Learn more</a></li>
+										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %>&loc=attr" class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>
@@ -156,8 +152,7 @@
 					<section id="three" class="wrapper style2 spotlights sectionM">
 						<div class="inner">
 							<h1>숙박</h1>
-							<p>Just another fine responsive site template designed by <a href="http://html5up.net">HTML5 UP</a><br />
-							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p>
+							<p>여기에 아무거나 집어넣어도 되고 삭제해도 되는 태그 <!--<a href="http://html5up.net/license">Creative Commons</a>-->.</p>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
@@ -170,12 +165,9 @@
 									<h2><%=listHotel.get(i).getName()%></h2>
 									<p><%=listHotel.get(i).getAddress() %></p>
 									<p><%=listHotel.get(i).getTel() %></p>
-									<p><%=listHotel.get(i).getCount() %></p>
-									
-									
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<big><b><p><%=listHotel.get(i).getCount() %> (추천수) </p></b></big>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %>&loc=hotel" class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>
