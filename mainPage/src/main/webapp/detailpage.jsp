@@ -1,3 +1,5 @@
+<%@page import="com.DAO.PositiveattractionlistDAO"%>
+<%@page import="com.DAO.positiveFoodListDAO"%>
 <%@page import="com.VO.positiveVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.DAO.positiveHotelListDAO"%>
@@ -11,8 +13,23 @@
 -->
 
 <%
-positiveHotelListDAO dao = new positiveHotelListDAO();
-ArrayList<positiveVO> list = dao.positiveHotelList();
+			int index = Integer.parseInt(request.getParameter("index")); 			
+
+			positiveFoodListDAO dao1 = new positiveFoodListDAO();
+			ArrayList<positiveVO> listFood = dao1.positiveFoodList();
+			
+			positiveHotelListDAO dao2 = new positiveHotelListDAO();
+			ArrayList<positiveVO> listHotel = dao2.positiveHotelList();
+			
+			PositiveattractionlistDAO dao3 = new PositiveattractionlistDAO();
+			ArrayList<positiveVO> listattraction = dao3.address();
+
+			positiveHotelListDAO dao = new positiveHotelListDAO();
+			ArrayList<positiveVO> list = dao.positiveHotelList();
+			
+			
+			
+			
 %>
 <html lang="ko">
 	<head>
@@ -44,21 +61,21 @@ ArrayList<positiveVO> list = dao.positiveHotelList();
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
+							<h1 class="major"><%=listFood.get(index).getName()%></h1>
 							<span class="image fit"><img src="trip/images/pic04.jpg" alt="" /></span>
 							<p>링크</p>
 							<p>지도</p>
-							<p><%=list.get(0).getName()%></p>
+							<p><%=listFood.get(index).getName()%></p>
 							<div id="map" style="width:1040px;height: 388px;"></div>
 							<script>
 							var HOME_PATH = window.HOME_PATH || '.';
 			                //지도 생성
-			                var gwangju = new naver.maps.LatLng(35.14496693139039, 126.91577035574662),
+			                var gwangju = new naver.maps.LatLng(35.15439714024425, 126.87611635389719),
 			                    map = new naver.maps.Map('map', {
 			                    	//지도의 중심좌표
-			                        center: gwangju.destinationPoint(100, 100),
+			                        center: gwangju.destinationPoint(50, 50),
 			                      	//지도의 확대 레벨
-			                        zoom: 17
+			                        zoom: 18
 			                    });
 			                	marker = new naver.maps.Marker({
 			                    position: gwangju,
@@ -66,8 +83,8 @@ ArrayList<positiveVO> list = dao.positiveHotelList();
 			                });
 		                	var contentString = [
 		                        '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
-		                        '<center><h4 style="color : #000000"><%=list.get(0).getName()%></h4></center>',
-		                        '<p><%=list.get(1).getAddress()%></P>',
+		                        '<center><h4 style="color : #000000"><%=listFood.get(index).getName()%></h4></center>',
+		                        '<p><%=listFood.get(index).getAddress()%></P>',
 		                        '</div>'
 		                    	].join('');
 
@@ -85,8 +102,10 @@ ArrayList<positiveVO> list = dao.positiveHotelList();
 
 			                infowindow.open(map, marker);
                         	</script>
+                        	
 						</div>
 					</section>
+					
 				</div>
 
 		<!-- Footer -->
