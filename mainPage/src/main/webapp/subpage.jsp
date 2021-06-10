@@ -95,7 +95,7 @@
 
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights fade-up sectionM">
-						<div class="inner">
+						<div  class="inner">
 							<h1>맛집</h1>
 							<p>여기에 아무거나 집어넣어도 되고 삭제해도 되는 태그 <!--<a href="http://html5up.net/license">Creative Commons</a>.--></p>
 							<ul class="actions">
@@ -104,7 +104,7 @@
 						</div>
 						<% for (int i=0; i<listFood.size(); i++) { %>
 						<section>
-							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="<%=listFood.get(i).getFile() %>" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2><%=listFood.get(i).getName() %></h2>
@@ -118,6 +118,7 @@
 							</div>
 						</section>
 						<%} %>
+						
 					</section>
 
 				<!-- Two -->
@@ -132,7 +133,7 @@
 						</div>
 						<% for (int i=0; i<listattraction.size(); i++) { %>
 						<section>
-							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="<%=listattraction.get(i).getFile() %>" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2><%=listattraction.get(i).getName()%></h2>
@@ -159,7 +160,7 @@
 						</div>
 						<% for (int i=0; i<listHotel.size(); i++) { %>
 						<section>
-							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="<%=listHotel.get(i).getFile() %>" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2><%=listHotel.get(i).getName()%></h2>

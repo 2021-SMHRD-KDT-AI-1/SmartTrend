@@ -31,6 +31,19 @@ public class positiveFoodListDAO {
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()) { // next() : 결과행이 존재할때 true, 커서 이동
 				positiveVO vo = new positiveVO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4));
+				String name = rs.getString(1);
+				if(name.equals("데일리")) {
+					vo.setFile("images/foodMain/dailyMain.jpg");
+				}else if(name.equals("레이")) {
+					vo.setFile("images/foodMain/rayMain.jpg");
+				}if(name.equals("하나")) {
+					vo.setFile("images/foodMain/hanaMain.jpg");
+				}if(name.equals("디자인")) {
+					vo.setFile("images/foodMain/designMain.jpg");
+				}if(name.equals("어가")) {
+					vo.setFile("images/foodMain/eogaMain.jpg");
+				}
+				
 				list.add(vo);
 			}
 			rs.close();

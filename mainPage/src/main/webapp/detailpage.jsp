@@ -13,6 +13,10 @@
 -->
 
 <%
+
+//positiveHotelListDAO dao = new positiveHotelListDAO();
+//ArrayList<positiveVO> list = dao.positiveHotelList();
+
 			int index = Integer.parseInt(request.getParameter("index"));
 			String loc = request.getParameter("loc");
 			
@@ -94,6 +98,7 @@
 			
 			
 			
+
 %>
 <html lang="ko">
 	<head>
@@ -127,22 +132,22 @@
 						<div class="inner">
 							<h1 class="major"><%=list.get(index).getName()%></h1>
 							<span class="image fit"><img src="trip/images/pic04.jpg" alt="" /></span><br>
-							<div style="width:500px; height:150px; border:1px solid red; float:left; margin-right:100px;">
+							<div style="width:500px; height:200px; border:1px solid red; float:left; margin-right:100px;">
 							첫번째 영역:
 							왼쪽에 위치시킴 =>  float:left
 							오른쪽에 바깥여백을 줌 =>  margin-right:10px;
 							여기에 그림이나 글자 또는 광고 등을 넣음
 							</div>
-							<div style="width:500px; height:150px; border:1px solid green; float:left;">
+							<div style="width:500px; height:200px; border:1px solid green; float:left;">
 							두번째 영역:
 							첫번째 영역 옆에 나란히 붙임 => float:left
 							여기에 그림이나 글자 또는 광고 등을 넣음
 							</div>
 							<br>
 							<div>
+							<br><br><br><br><br><br><br><br><br>
 							<big><b><a href= <%=blog[index] %>><%=list.get(index).getName()%>에 관한 정보를 더 보시려면?</a></b></big>
-							<br>
-							<br>
+							<br><br><br><br><br>
 							</div>
 							<div id="map" style="width:1040px;height: 388px;"></div>
 							<script>
