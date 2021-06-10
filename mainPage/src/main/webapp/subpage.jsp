@@ -113,7 +113,7 @@
 									<p><%=listFood.get(i).getTel() %></p>
 									<p><%=listFood.get(i).getCount() %></p>
 									<ul class="actions">
-										<li><a href="detailpage.jsp?a=ajshd&?a=asgdh&" class="button">Learn more</a></li>
+										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %>" class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>
@@ -144,7 +144,7 @@
 									
 									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %> "class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>

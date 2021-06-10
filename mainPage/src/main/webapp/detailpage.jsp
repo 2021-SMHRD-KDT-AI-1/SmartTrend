@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<%@page import="com.DAO.PositiveattractionlistDAO"%>
+<%@page import="com.DAO.positiveFoodListDAO"%>
+>>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-1/SmartTrend.git
 <%@page import="com.VO.positiveVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.DAO.positiveHotelListDAO"%>
@@ -11,8 +16,37 @@
 -->
 
 <%
+<<<<<<< HEAD
 positiveHotelListDAO dao = new positiveHotelListDAO();
 ArrayList<positiveVO> list = dao.positiveHotelList();
+=======
+			int index = Integer.parseInt(request.getParameter("index"));
+			
+			
+			double locationX[] = new double[5];
+			double locationY[] = new double[5];
+			
+			locationX[0] = 35.15439714024425;
+			locationY[0] = 126.90131769024425;
+					
+			
+			if(index==0) {
+			positiveFoodListDAO dao = new positiveFoodListDAO();
+			ArrayList<positiveVO> list = dao.positiveFoodList();
+			} else if(index==1) {
+			positiveHotelListDAO dao = new positiveHotelListDAO();
+			ArrayList<positiveVO> list = dao.positiveHotelList();
+			} else if(index==2) {
+			PositiveattractionlistDAO dao = new PositiveattractionlistDAO();
+			ArrayList<positiveVO> list = dao.address();
+			} else if(index==3) {
+			positiveHotelListDAO dao = new positiveHotelListDAO();
+			ArrayList<positiveVO> list = dao.positiveHotelList();
+			}
+			
+			
+			
+>>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-1/SmartTrend.git
 %>
 <html lang="ko">
 	<head>
@@ -44,10 +78,11 @@ ArrayList<positiveVO> list = dao.positiveHotelList();
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
+							<h1 class="major"><%=list.get(index).getName()%></h1>
 							<span class="image fit"><img src="trip/images/pic04.jpg" alt="" /></span>
 							<p>링크</p>
 							<p>지도</p>
+<<<<<<< HEAD
 							<p><%=list.get(0).getName()%></p>
 							<div id="map" style="width:1040px;height: 388px;"></div>
 							<script>
@@ -85,8 +120,54 @@ ArrayList<positiveVO> list = dao.positiveHotelList();
 
 			                infowindow.open(map, marker);
                         	</script>
+=======
+							<p><%=list.get(index).getName()%></p>
+							<div id="map" style="width:1040px;height: 388px;"></div>
+							<script>
+							var HOME_PATH = window.HOME_PATH || '.';
+			                //지도 생성
+			                let locX = <%=locationX[index] %>;
+			                let locY = <%=locationY[index] %>;
+			                var gwangju = new naver.maps.LatLng(locX, locY),
+			                    map = new naver.maps.Map('map', {
+			                    	//지도의 중심좌표
+			                        center: gwangju.destinationPoint(50, 50),
+			                      	//지도의 확대 레벨
+			                        zoom: 18
+			                    });
+			                	marker = new naver.maps.Marker({
+			                    position: gwangju,
+			                    map: map
+			                });
+		                	var contentString = [
+		                        '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
+		                        '<center><h4 style="color : #000000"><%=list.get(index).getName()%></h4></center>',
+		                        '<p><%=list.get(index).getAddress()%></P>',
+		                        '</div>'
+		                    	].join('');
+
+			                var infowindow = new naver.maps.InfoWindow({
+			                    content: contentString
+			              		 });
+
+			                naver.maps.Event.addListener(marker, "click", function(e) {
+			                    if (infowindow.getMap()) {
+			                        infowindow.close();
+			                    } else {
+			                        infowindow.open(map, marker);
+			                    }
+			                });
+
+			                infowindow.open(map, marker);
+                        	</script>
+                        	
+>>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-1/SmartTrend.git
 						</div>
 					</section>
+<<<<<<< HEAD
+=======
+					
+>>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-1/SmartTrend.git
 				</div>
 
 		<!-- Footer -->
