@@ -144,6 +144,10 @@
 									<p><%=listattraction.get(i).getCount() %></p>
 									
 									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+<<<<<<< HEAD
+=======
+									 
+>>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-1/SmartTrend.git
 										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %> "class="button">Learn more</a></li>
 									</ul>
 								</div>

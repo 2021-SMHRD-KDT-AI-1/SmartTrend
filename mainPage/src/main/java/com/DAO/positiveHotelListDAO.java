@@ -32,6 +32,7 @@ public class positiveHotelListDAO {
 			while(rs.next()) { // next() : 결과행이 존재할때 true, 커서 이동
 				positiveVO vo = new positiveVO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4));
 				String name = rs.getString(1);
+<<<<<<< HEAD
 				if(name.equals("허브")) {
 					vo.setFile("images/hotelMain/hubMain.jpg");
 				}
@@ -47,6 +48,13 @@ public class positiveHotelListDAO {
 				else if(name.equals("더블유라운지호텔")) {
 					vo.setFile("images/hotelMain/wloungeMain.jpg");
 				}	
+=======
+				if(name.equals("더블유라운지호텔")) {
+					vo.setFile("images/hotelMain/wloungeMain.jpg");
+				}
+				
+				
+>>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-1/SmartTrend.git
 				list.add(vo);
 			}
 			rs.close();

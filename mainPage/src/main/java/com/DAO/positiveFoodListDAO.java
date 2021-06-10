@@ -34,7 +34,16 @@ public class positiveFoodListDAO {
 				String name = rs.getString(1);
 				if(name.equals("데일리")) {
 					vo.setFile("images/foodMain/dailyMain.jpg");
+				}else if(name.equals("레이")) {
+					vo.setFile("images/foodMain/rayMain.jpg");
+				}if(name.equals("하나")) {
+					vo.setFile("images/foodMain/hanaMain.jpg");
+				}if(name.equals("디자인")) {
+					vo.setFile("images/foodMain/designMain.jpg");
+				}if(name.equals("어가")) {
+					vo.setFile("images/foodMain/eogaMain.jpg");
 				}
+				
 				list.add(vo);
 			}
 			rs.close();
