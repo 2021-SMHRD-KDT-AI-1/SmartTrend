@@ -25,7 +25,7 @@
 			
 			String blog[] = new String[5];
 	
-			
+			String image[] = new String[6];
 					
 			ArrayList<positiveVO> list = null;
 			
@@ -51,6 +51,10 @@
 				blog[2] = "https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=flyhigh3010&logNo=221373346804";
 				blog[3] = "https://m.blog.naver.com/korea0313/221962185290";
 				blog[4] = "https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=cumicoomi&logNo=220632897223";
+				
+				// 이미지 배열
+				image[0] = "images/foodMain/dailyMain.jpg";
+				image[1] = "images/foodSub/dailySub8.jpg";
 				
 			} else if(loc.equals("attr")) {
 				PositiveattractionlistDAO dao = new PositiveattractionlistDAO();
@@ -131,7 +135,7 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major"><%=list.get(index).getName()%></h1>
-							<span class="image fit"><img src="trip/images/pic04.jpg" alt="" /></span><br>
+							<span class="image fit"><img src=<%=image[index] %> alt="" /></span><br>
 							<div style="width:500px; height:200px; border:1px solid red; float:left; margin-right:100px;">
 							첫번째 영역:
 							왼쪽에 위치시킴 =>  float:left
