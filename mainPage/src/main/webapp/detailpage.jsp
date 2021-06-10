@@ -28,6 +28,8 @@
 			String image[] = new String[6];
 			String image2[] = new String[6];
 			String image3[] = new String[6];
+			String image4[] = new String[6];
+
 					
 			ArrayList<positiveVO> list = null;
 			
@@ -53,6 +55,37 @@
 				blog[2] = "https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=flyhigh3010&logNo=221373346804";
 				blog[3] = "https://m.blog.naver.com/korea0313/221962185290";
 				blog[4] = "https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=cumicoomi&logNo=220632897223";
+				
+				// 이미지 배열 메인맛집 
+				image[0] = "images/foodMain/dailyMain.jpg";
+				image[1] = "images/foodMain/rayMain.jpg";
+				image[2] = "images/foodMain/hanaMain.jpg";
+				image[3] = "images/foodMain/designMain.jpg";
+				image[4] = "images/foodMain/eogaMain.jpg";
+				
+				//이미지2 배열 서브 맛집
+				image2[0] = "images/foodSub/dailySub1.jpg";
+				image2[1] = "images/foodSub/raySub2.jpg";
+				image2[2] = "images/foodSub/hanaSub3.jpg";
+				image2[3] = "images/foodSub/designSub4.jpg";
+				image2[4] = "images/foodSub/eogaSub5.jpg";
+				
+				//이미지3 배열 서브맛집 오른쪽 
+				image3[0] = "images/foodSub/dailySub2.jpg";
+				image3[1] = "images/foodSub/raySub3.jpg";
+				image3[2] = "images/foodSub/hanaSub4.jpg";
+				image3[3] = "images/foodSub/designSub5.jpg";
+				image3[4] = "images/foodSub/eogaSub6.jpg";
+				
+			
+			
+				
+				
+				
+				
+				
+				
+				
 				
 			} else if(loc.equals("attr")) {
 				PositiveattractionlistDAO dao = new PositiveattractionlistDAO();
@@ -80,11 +113,17 @@
 				image[2] = "images/attractionMain/jeungsimsatempleMain.jpg";
 				image[3] = "images/attractionMain/gwangjufamilylandMain.jpg";
 				
-				// 명소2 이미지
-				image2[0] = "";
+				//이미지 배열 서브 왼쪽 
+				image2[0] = "images/attractionSub/ydmarketSub9.jpg";
+				image2[1] = "images/attractionSub/pleasanttheaterSub3.jpg";
+				image2[2] = "images/attractionSub/jeungsimsatempleSub20.jpg";
+				image2[3] = "images/attractionSub/gwangjufamilylandSub10.jpg";
 				
-				// 명소3 이미지 
-				image3[0] = "";
+				//이미지 배열 서브 오른쪽 
+				image3[0] = "images/attractionSub/ydmarketSub7.jpg";
+				image3[1] = "images/attractionSub/pleasanttheaterSub4.jpg";
+				image3[2] = "images/attractionSub/jeungsimsatempleSub1.jpg";
+				image3[3] = "images/attractionSub/gwangjufamilylandSub7.jpg";
 				
 			} else if(loc.equals("hotel")) {
 				positiveHotelListDAO dao = new positiveHotelListDAO();
@@ -102,12 +141,35 @@
 				locationX[4] = 35.14996032263111;
 				locationY[4] = 126.85075724087294;
 				
-				// 호텔 블로그 링크
+				// 호텔 메인 블로그 링크
 				blog[0] = "https://www.goodchoice.kr/product/detail?ano=2780";
 				blog[1] = "https://blog.naver.com/seoyujin0706/221734495450";
 				blog[2] = "https://blog.naver.com/lovee4789/222265500311";
 				blog[3] = "https://blog.naver.com/oozt6/221542841015";
 				blog[4] = "https://blog.naver.com/4896630/222074677258";
+				
+				// 호텔 이미지
+				image[0] = "images/hotelMain/hubMain3.jpg";
+				image[1] = "images/hotelSub/bentleySub5.jpg";
+				image[2] = "images/hotelSub/spotSub3.jpg";
+				image[3] = "images/hotelSub/geumsoojangSub3.jpg";
+				image[4] = "images/hotelSub/wloungeSub5.jpg";
+				
+				
+				//이미지 배열 서브 왼쪽 
+				image2[0] = "images/hotelSub/hubSub8.jpg";
+				image2[1] = "images/hotelSub/bentleySub8.jpg";
+				image2[2] = "images/hotelSub/spotSub4.jpg";
+				image2[3] = "images/hotelSub/geumsoojangSub6.jpg";
+				image2[4] = "images/hotelSub/wloungeSub2.jpg";
+				
+				//이미지 배열 서브 오른쪽 
+				image3[0] = "images/hotelSub/hubSub9.jpg";
+				image3[1] = "images/hotelSub/bentleySub2.jpg";
+				image3[2] = "images/hotelSub/spotSub7.jpg";
+				image3[3] = "images/hotelSub/geumsoojangSub7.jpg";
+				image3[4] = "images/hotelSub/wloungeSub1.jpg";
+				
 			}
 			
 			
@@ -143,23 +205,22 @@
 
 				<!-- Main -->
 					<section id="main" class="wrapper">
-						<div class="inner">
+						<div  class="inner">
 							<h1 class="major"><%=list.get(index).getName()%></h1>
-							<span class="image fit"><img src="<%=image[index] %>" alt="" /></span><br>
-							<div style="width:500px; height:200px; border:1px solid red; float:left; margin-right:100px;">
-							첫번째 영역:
-							왼쪽에 위치시킴 =>  float:left
-							오른쪽에 바깥여백을 줌 =>  margin-right:10px;
-							여기에 그림이나 글자 또는 광고 등을 넣음
+							<span class="image fit"><img src=<%=image[index] %> alt="" /></span><br>
+							
+							<div style="width:500px; height:300px; display: inline-block; overflow: hidden; margin-right:100px;">
+							
+							<span class="image fit"><img src=<%=image2[index] %> alt="" /></span>
+							
 							</div>
-							<div style="width:500px; height:200px; border:1px solid green; float:left;">
-							두번째 영역:
-							첫번째 영역 옆에 나란히 붙임 => float:left
-							여기에 그림이나 글자 또는 광고 등을 넣음
+							<div style="width:500px; height:300px;  display: inline-block; overflow: hidden;">
+							<span class="image fit"><img style="width:500px" src=<%=image3[index] %> alt="" /></span>
+							
 							</div>
 							<br>
 							<div>
-							<br><br><br><br><br><br><br><br><br>
+							<br><br><br><br><br>
 							<big><b><a href= <%=blog[index] %>><%=list.get(index).getName()%>에 관한 정보를 더 보시려면?</a></b></big>
 							<br><br><br><br><br>
 							</div>

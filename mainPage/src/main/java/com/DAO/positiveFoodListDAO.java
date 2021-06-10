@@ -33,15 +33,15 @@ public class positiveFoodListDAO {
 				positiveVO vo = new positiveVO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4));
 				String name = rs.getString(1);
 				if(name.equals("데일리")) {
-					vo.setFile("images/foodMain/dailyMain.jpg");
+					vo.setFile("images/foodSub/dailySub9.jpg");
 				}else if(name.equals("레이")) {
-					vo.setFile("images/foodMain/rayMain.jpg");
+					vo.setFile("images/foodSub/raySub9.jpg");
 				}if(name.equals("하나")) {
-					vo.setFile("images/foodMain/hanaMain.jpg");
+					vo.setFile("images/foodSub/hanaSub9.jpg");
 				}if(name.equals("디자인")) {
-					vo.setFile("images/foodMain/designMain.jpg");
+					vo.setFile("images/foodSub/designSub1.jpg");
 				}if(name.equals("어가")) {
-					vo.setFile("images/foodMain/eogaMain.jpg");
+					vo.setFile("images/foodSub/eogaSub6.jpg");
 				}
 				
 				list.add(vo);

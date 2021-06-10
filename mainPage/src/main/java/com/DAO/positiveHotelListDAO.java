@@ -33,16 +33,16 @@ public class positiveHotelListDAO {
 				positiveVO vo = new positiveVO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4));
 				String name = rs.getString(1);
 				if(name.equals("허브")) {
-					vo.setFile("images/hotelMain/hubMain.jpg");
+					vo.setFile("images/hotelMain/hubMain4.jpg");
 				}
 				else if(name.equals("벤틀리호텔")) {
 					vo.setFile("images/hotelMain/bentleyMain.jpg");
 				}
 				else if(name.equals("호텔더스팟")) {
-					vo.setFile("images/hotelMain/spotMain.jpg");
+					vo.setFile("images/hotelMain/spotMain2.jpg");
 				}
 				else if(name.equals("금수장관광호텔")) {
-					vo.setFile("images/hotelMain/geumsoojangMain.jpg");
+					vo.setFile("images/hotelMain/geumsoojangMain1.jpg");
 				}	
 				else if(name.equals("더블유라운지호텔")) {
 					vo.setFile("images/hotelMain/wloungeMain.jpg");
