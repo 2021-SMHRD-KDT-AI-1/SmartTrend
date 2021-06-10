@@ -392,7 +392,7 @@
 								-13 -38 -30 -73 l-29 -65 -111 -28 c-61 -15 -112 -26 -113 -24 -45 67 -59 79
 								-98 79 l-39 0 0 66 c0 63 2 69 42 116 l42 50 55 -5 c31 -3 65 -2 76 3 31 13
 								38 12 70 -16z"/>
-								<a href="subpage.jsp?loc=gwangju">
+								<a href="subpage.jsp?loc=Gwangju">
 								<path id="gwangju" d="M3657 2473 c-4 -4 -36 -6 -71 -5 -63 2 -65 1 -95 -35 -25 -30 -31
 								-47 -31 -85 0 -46 1 -48 28 -48 19 0 37 -11 62 -41 l36 -41 64 17 c106 26 128
 								35 133 53 3 9 12 34 21 54 l16 36 -43 25 c-23 14 -53 37 -66 51 -24 26 -42 32
@@ -531,10 +531,10 @@
 								<li class="covid_info covid_info4"><div><span>격리헤제<br><%=covid_Se.getReleaseFromQuarantine() %></span></div></li>
 							</ul>
 							<ul class="je_info info">
-								<li class="covid_info covid_info1"><div><span>확진자수<br><%=covid_Se.getConfirmedPatient() %></span></div></li>
-								<li class="covid_info covid_info2"><div><span>해외유입<br><%=covid_Se.getForeignImport() %></span></div></li>
-								<li class="covid_info covid_info3"><div><span>격리환자<br><%=covid_Se.getInQuarantine() %></span></div></li>
-								<li class="covid_info covid_info4"><div><span>격리헤제<br><%=covid_Se.getReleaseFromQuarantine() %></span></div></li>
+								<li class="covid_info covid_info1"><div><span>확진자수<br><%=covid_Je.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info covid_info2"><div><span>해외유입<br><%=covid_Je.getForeignImport() %></span></div></li>
+								<li class="covid_info covid_info3"><div><span>격리환자<br><%=covid_Je.getInQuarantine() %></span></div></li>
+								<li class="covid_info covid_info4"><div><span>격리헤제<br><%=covid_Je.getReleaseFromQuarantine() %></span></div></li>
 							</ul>
 						</nav>
 					</header>
