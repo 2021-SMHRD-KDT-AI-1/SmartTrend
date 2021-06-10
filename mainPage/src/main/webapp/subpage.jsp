@@ -51,7 +51,7 @@
 %>
 <html lang="ko">
 	<head>
-		<title>Hyperspace by HTML5 UP</title>
+		<title>Smart Trend/sub</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="trip/assets/css/main.css" />
@@ -59,7 +59,18 @@
 		<style>
 			#one, #two, #three { display: none; }
 			#one.on, #two.on, #three.on { display: block; }
+			#one >.inner{ background: url(./trip/assets/css/images/qqsplash.jpg); background-size: 100% auto; background-position: 50% 50%; }
+			#two >.inner{ background: url(./trip/assets/css/images/CJLK9T.jpg); background-size: 100% auto; background-position: 50% 100%; }
+			#three >.inner{ background: url(./trip/assets/css/images/HgeHz1.jpg); background-size: 100% auto; background-position: 50% 80%; }
+			
+			
 			#intro.on { display: none; }
+			#sidebar li a { cursor: pointer; }
+			
+			.asww { padding: 28px; }
+			.spotlights > section:nth-child(2n-1) { background: rgba(0,0,0,0.05); }
+			.spotlights > section:nth-child(2n) { background: rgba(0,0,0,0.1); }
+			
 		</style>
 	</head>
 	<body class="is-preload">
@@ -84,11 +95,11 @@
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up sectionM">
 						<div class="inner">
-							<h1>Welcome <%=locName %></h1>
-							<p>Just another fine responsive site template designed by <a href="http://html5up.net">HTML5 UP</a><br />
-							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p>
+							<h1 style="color:#fff;">Welcome <%=locName %></h1>
+							<p style="color:rgba(255,255,255,0.65);">대한민국의 서남부에 있는 광역시로 전라남도의 중심 도시이며, 2016년말 현재, 면적 501.25㎢, 인구 148만 9천명으로 북동쪽으로 담양군, 북쪽으로 장성군, 서쪽으로 함평군, 남쪽으로 나주시, 남동쪽으로 화순군에 접한다. 서울ㆍ부산ㆍ대구ㆍ인천에 이은 호남지방의 최대 도시입니다.
+							</p>
 							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
+								<li><a style="border-color: rgba(255, 255, 255, 0.35) !important; color: #fff !important" href="index.jsp" class="button scrolly">H O M E</a></li>
 							</ul>
 						</div>
 						<div id="intro-bg"></div>
@@ -97,26 +108,31 @@
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights fade-up sectionM">
 						<div  class="inner">
-							<h1>맛집</h1>
-							<p>여기에 아무거나 집어넣어도 되고 삭제해도 되는 태그 <!--<a href="http://html5up.net/license">Creative Commons</a>.--></p>
+							<h1 style="color:#fff;">맛집</h1>
+							<p style="color:rgba(255,255,255,0.65);">SNS에서 추출한 데이터를 바탕으로 AI가 맛집을 추천해 드립니다.</p>
 							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
+								<li><a style="border-color: rgba(255, 255, 255, 0.35) !important; color: #fff !important" href="index.jsp" class="button scrolly">H O M E</a></li>
 							</ul>
 						</div>
 						<% for (int i=0; i<listFood.size(); i++) { %>
-						<section>
-							<a href="#" class="image"><img src="<%=listFood.get(i).getFile() %>" alt="" data-position="center center" /></a>
+						<section class="asww">
+							<%if (i%2==0) { %>
+							<a href="#" class="image"><img src="<%=listFood.get(i).getFile() %>" alt="" data-position="center center" /></a>	
+							<% }%> 
 							<div class="content">
 								<div class="inner">
 									<h2><%=listFood.get(i).getName() %></h2>
-									<p><%=listFood.get(i).getAddress() %></p>
-									<p><%=listFood.get(i).getTel() %></p>
-									<big><b><p><%=listFood.get(i).getCount() %> (추천수) </p></b></big>
+									<p><br><%=listFood.get(i).getAddress() %><br>
+									<%=listFood.get(i).getTel() %><br>
+									<big><b><%=listFood.get(i).getCount() %> (추천수) </b></big></p>
 									<ul class="actions">
-										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %>&loc=food" class="button">Learn more</a></li>
+										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %>&loc=food&loc2=Gwangju" class="button">M O R E</a></li>
 									</ul>
 								</div>
 							</div>
+							<% if (i%2==1) { %>
+							<a href="#" class="image"><img src="<%=listFood.get(i).getFile() %>" alt="" data-position="center center" /></a>	
+							<% }%>
 						</section>
 						<%} %>
 						
@@ -126,26 +142,31 @@
 				    
 					<section id="two" class="wrapper style2 spotlights sectionM">
 						<div class="inner">
-							<h1>명소</h1>
-							<p>여기에 아무거나 집어넣어도 되고 삭제해도 되는 태그 <!--<a href="http://html5up.net/license">Creative Commons</a>.--></p>
+							<h1 style="color:#fff;">명소</h1>
+							<p style="color:rgba(255,255,255,0.65);">SNS에서 추출한 데이터를 바탕으로 AI가 주변 명소를 추천해 드립니다.</p>
 							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
+								<li><a style="border-color: rgba(255, 255, 255, 0.35) !important; color: #fff !important" href="index.jsp" class="button scrolly">H O M E</a></li>
 							</ul>
 						</div>
 						<% for (int i=0; i<listattraction.size(); i++) { %>
-						<section>
+						<section class="asww">
+							<%if (i%2==0) { %>
 							<a href="#" class="image"><img src="<%=listattraction.get(i).getFile() %>" alt="" data-position="center center" /></a>
+							<% }%> 
 							<div class="content">
 								<div class="inner">
 									<h2><%=listattraction.get(i).getName()%></h2>
-									<p><%=listattraction.get(i).getAddress() %></p>
-									<p><%=listattraction.get(i).getTel() %></p>
-									<big><b><p><%=listattraction.get(i).getCount() %> (추천수) </p></b></big>
+									<p><br><%=listattraction.get(i).getAddress() %><br>
+									<%=listattraction.get(i).getTel() %><br>
+									<big><b><%=listattraction.get(i).getCount() %> (추천수) </b></big></p>
 									<ul class="actions">
-										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %>&loc=attr" class="button">Learn more</a></li>
+										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %>&loc=attr&loc2=Gwangju" class="button">M O R E</a></li>
 									</ul>
 								</div>
 							</div>
+							<% if (i%2==1) { %>
+							<a href="#" class="image"><img src="<%=listattraction.get(i).getFile() %>" alt="" data-position="center center" /></a>
+							<% }%>
 						</section>
 						<%} %>	
 					</section>
@@ -153,26 +174,31 @@
 				<!-- three -->
 					<section id="three" class="wrapper style2 spotlights sectionM">
 						<div class="inner">
-							<h1>숙박</h1>
-							<p>여기에 아무거나 집어넣어도 되고 삭제해도 되는 태그 <!--<a href="http://html5up.net/license">Creative Commons</a>-->.</p>
+							<h1 style="color:#fff;">숙박</h1>
+							<p style="color:rgba(255,255,255,0.65);">SNS에서 추출한 데이터를 바탕으로 AI가 숙박업체를 추천해 드립니다.</p>
 							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
+								<li><a style="border-color: rgba(255, 255, 255, 0.35) !important; color: #fff !important" href="index.jsp" class="button scrolly">H O M E</a></li>
 							</ul>
 						</div>
 						<% for (int i=0; i<listHotel.size(); i++) { %>
-						<section>
+						<section class="asww">
+							<%if (i%2==0) { %>
 							<a href="#" class="image"><img src="<%=listHotel.get(i).getFile() %>" alt="" data-position="center center" /></a>
+							<% }%> 
 							<div class="content">
 								<div class="inner">
 									<h2><%=listHotel.get(i).getName()%></h2>
-									<p><%=listHotel.get(i).getAddress() %></p>
-									<p><%=listHotel.get(i).getTel() %></p>
-									<big><b><p><%=listHotel.get(i).getCount() %> (추천수) </p></b></big>
+									<p><br><%=listHotel.get(i).getAddress() %><br>
+									<%=listHotel.get(i).getTel() %><br>
+									<big><b><%=listHotel.get(i).getCount() %> (추천수) </b></big></p>
 									<ul class="actions">
-										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %>&loc=hotel" class="button">Learn more</a></li>
+										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %>&loc=hotel&loc2=Gwangju" class="button">M O R E</a></li>
 									</ul>
 								</div>
 							</div>
+							<%if (i%2==1) { %>
+							<a href="#" class="image"><img src="<%=listHotel.get(i).getFile() %>" alt="" data-position="center center" /></a>
+							<% }%> 
 						</section>
 						<%} %>	
 					</section>
@@ -200,6 +226,7 @@
 			<script src="trip/assets/js/main.js"></script>
 			<script>
 				function sideClick(x) {
+					//$('html').scrollTop(0);
 					$('.sectionM').removeClass('on')
 					$('#intro').addClass('on')
 					$(x).addClass('on')

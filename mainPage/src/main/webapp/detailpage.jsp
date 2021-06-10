@@ -19,6 +19,7 @@
 
 			int index = Integer.parseInt(request.getParameter("index"));
 			String loc = request.getParameter("loc");
+			String loc2 = request.getParameter("loc2");
 			
 			double locationX[] = new double[5];
 			double locationY[] = new double[5];
@@ -182,6 +183,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="trip/assets/css/main.css" />
+		<style type="text/css">
+			.hdfsj { width:100%; display: flex; justify-content: space-between; align-items: center; }
+		</style>
 		<noscript><link rel="stylesheet" href="trip/assets/css/noscript.css" /></noscript>
 		<script type="text/javascript"
 		src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=zfj80en4gl"></script>
@@ -190,12 +194,11 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
+				<a href="index.jsp" class="title">Smart Trend</a>
 				<nav>
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
+						<li><a href="index.jsp">Home</a></li>
+						<li><a href="subpage.jsp?loc=<%=loc2 %>" class="active"><%=loc2 %></a></li>
 					</ul>
 				</nav>
 			</header>
@@ -208,23 +211,24 @@
 						<div  class="inner">
 							<h1 class="major"><%=list.get(index).getName()%></h1>
 							<span class="image fit"><img src=<%=image[index] %> alt="" /></span><br>
-							
-							<div style="width:500px; height:300px; display: inline-block; overflow: hidden; margin-right:100px;">
-							
-							<span class="image fit"><img src=<%=image2[index] %> alt="" /></span>
-							
-							</div>
-							<div style="width:500px; height:300px;  display: inline-block; overflow: hidden;">
-							<span class="image fit"><img style="width:500px" src=<%=image3[index] %> alt="" /></span>
-							
+							<div class="hdfsj">
+								<div style="width:500px; height:300px; display: inline-block; overflow: hidden; margin-right:100px;">
+								
+								<span class="image fit"><img src=<%=image2[index] %> alt="" /></span>
+								
+								</div>
+								<div style="width:500px; height:300px;  display: inline-block; overflow: hidden;">
+								<span class="image fit"><img style="width:500px" src=<%=image3[index] %> alt="" /></span>
+								
+								</div>
 							</div>
 							<br>
 							<div>
-							<br><br><br><br><br>
-							<big><b><a href= <%=blog[index] %>><%=list.get(index).getName()%>에 관한 정보를 더 보시려면?</a></b></big>
-							<br><br><br><br><br>
+							<br><br><br>
+							<big><b><a href= <%=blog[index] %>>>>>  <%=list.get(index).getName()%>에 관한 정보를 더 보시려면?</a></b></big>
+							<br><br><br>
 							</div>
-							<div id="map" style="width:1040px;height: 388px;"></div>
+							<div id="map" style="width:100%;height: 388px; margin-bottom: 150px;"></div>
 							<script>
 							var HOME_PATH = window.HOME_PATH || '.';
 			                //지도 생성

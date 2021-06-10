@@ -82,7 +82,7 @@
 -->
 <html lang="ko">
 	<head>
-		<title>Aerial by HTML5 UP</title>
+		<title>Smart Trend</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assetss/css/main.css" />
@@ -92,10 +92,16 @@
 -->
 	<style>
 		#map path { cursor: pointer; transition: all .2s; }
-		.covid_info { line-height: 1.3em !important; border-radius: 50%; border: 3px solid #fff; margin: 0 1em; animation-delay: 0s !important; }
-		.covid_info div { width: 100%; height: 100%; display: flex !important; justify-content: center; align-items: center; flex-direction: column; }
-		.covid_info span { display: block; }
 		.gw_info, .bu_info, .se_info ,.je_info { display: none; }
+		
+		
+		.test {position:absolute; top:160px; left: calc(50% - 320px); width:120px; height: 450px; display: none; transition: all .4s;}
+		.test li { width:100px; height:100px; line-height: 1.3em !important; border-radius: 50%; border: 3px solid rgb(1, 32, 32); margin: 10px; }
+		.test div { width: 100%; height: 100%; display: flex !important; justify-content: center; align-items: center; flex-direction: column; color:rgb(1, 32, 32); font-weight:500; }
+		
+		.test22 {position:absolute; top:330px; right: calc(50% - 410px); }
+		.test22 li { font-size: 18px; font-weight: 400;  display: flex !important; align-items: center; }
+		.test22 div { width:30px; height:30px; border-radius: 50%; margin: 5px 15px 5px 5px; display:inline-block; }
 
 
 		
@@ -268,16 +274,16 @@
 				<!-- Header -->
 					<header id="header">
 						<h1>Smart Trend</h1>
-						<p>Security Chief &nbsp;&bull;&nbsp; Cyborg &nbsp;&bull;&nbsp; Never asked for this</p>
+						<p style=font-weight:500;">코로나 현황&nbsp;&bull;&nbsp; 코로나 안전 지역 &nbsp;&bull;&nbsp; 코로나 여행 트렌드</p>
 						<section>
 							<svg id="map" version="1.0" xmlns="http://www.w3.org/2000/svg"
-							width="600.000000px" height="500.000000px" viewBox="0 -50 900.000000 800.000000"
+							width="600.000000px" height="600.000000px" viewBox="50 -50 800.000000 800.000000"
 							preserveAspectRatio="xMidYMid meet">
 								<g transform="translate(0.000000,729.000000) scale(0.100000,-0.100000)"
 								fill="#000000" stroke="none">
 
 
-
+								<a href="subpage.jsp?loc=Gangwon">
 								<path id="gangwon" d="M5350 7217 c0 -60 -2 -65 -71 -167 -63 -95 -78 -110 -147 -154 l-77
 								-49 -97 17 c-61 11 -114 15 -143 10 -36 -5 -50 -3 -64 10 -16 15 -27 15 -90 5
 								-54 -9 -81 -9 -110 0 -35 10 -46 8 -110 -19 l-72 -31 -32 19 c-28 17 -48 19
@@ -310,10 +316,10 @@
 								44 -109 154 -64 71 -124 146 -136 168 -11 22 -45 68 -76 102 -31 33 -56 69
 								-56 78 0 9 -20 40 -44 68 -33 37 -67 99 -126 231 -44 100 -80 189 -80 200 0
 								10 -13 34 -30 53 -16 18 -30 44 -30 57 0 13 -6 29 -14 35 -7 6 -28 53 -46 104
-								-18 50 -35 95 -39 98 -3 4 -21 9 -38 12 l-33 7 0 -63z"/>
+								-18 50 -35 95 -39 98 -3 4 -21 9 -38 12 l-33 7 0 -63z"/></a>
 
 
-
+								<a href="subpage.jsp?loc=Gyunggi">
 								<path id="gg" d="M3764 6644 c-5 -36 -10 -44 -24 -39 -11 3 -20 -2 -27 -17 -6 -13 -45
 								-68 -86 -124 -62 -84 -80 -102 -108 -108 -49 -9 -79 -42 -79 -85 0 -55 -32
 								-180 -48 -186 -7 -3 -45 -8 -84 -12 -64 -5 -69 -8 -64 -27 2 -12 8 -51 11 -87
@@ -341,8 +347,7 @@
 								-19 -43 -26 -11 -29 -17 -29 -55 l0 -42 -67 -26 c-58 -23 -67 -25 -77 -11 -9
 								12 -17 13 -39 5 -16 -6 -50 -11 -76 -11 -42 0 -49 3 -60 26 -9 21 -16 25 -40
 								19 -27 -6 -28 -5 -34 40 -3 33 -13 55 -33 76 l-28 30 29 24 c19 16 37 23 50
-								19 57 -17 67 -8 51 42 -7 24 13 34 71 34 27 0 33 5 43 35 13 38 17 39 108 29z"/>
-
+								19 57 -17 67 -8 51 42 -7 24 13 34 71 34 27 0 33 5 43 35 13 38 17 39 108 29z"/></a>
 
 
 
@@ -366,15 +371,16 @@
 
 
 
-
+								<a href="subpage.jsp?loc=Incheon">
 								<path id="inc" d="M3362 5715 l-22 -45 -32 20 c-46 28 -94 27 -102 -2 -9 -36 -7 -39 13
 								-28 11 5 33 10 50 10 29 0 31 -3 31 -34 0 -36 12 -46 56 -46 14 0 27 -7 30
 								-15 10 -26 42 -36 90 -29 55 8 78 41 52 71 -9 10 -19 39 -22 65 -8 53 -18 62
 								-82 71 -40 7 -40 6 -62 -38z"/>
+								
 								<path d="M3060 6079 l-31 -60 31 -29 c25 -23 30 -36 30 -74 0 -34 -4 -46 -15
 								-46 -8 0 -15 -9 -15 -20 0 -17 7 -20 44 -20 26 0 48 6 56 15 8 10 17 12 29 5
 								12 -6 20 -4 29 10 9 14 7 40 -10 117 -16 80 -26 104 -51 131 -45 47 -62 42
-								-97 -29z"/>
+								-97 -29z"/></a>
 
 
 
@@ -390,7 +396,7 @@
 
 
 
-
+								<a href="subpage.jsp?loc=Chungbuk">
 								<path id="cnfqnr" d="M4907 5267 c-27 -11 -28 -14 -22 -57 6 -43 5 -46 -25 -63 -27 -17
 								-37 -17 -81 -7 -45 11 -50 15 -45 34 l5 22 -87 -17 c-48 -9 -104 -20 -125 -23
 								-36 -7 -40 -11 -85 -102 -45 -91 -48 -94 -74 -88 -21 4 -28 2 -28 -9 0 -8 -15
@@ -416,11 +422,11 @@
 								18 -47 19 -82 12 -51 -12 -54 -10 -62 33 -8 39 -27 42 -86 11 l-34 -18 -28 34
 								-28 33 35 29 c42 34 38 47 -14 47 -20 0 -46 6 -56 14 -16 11 -23 11 -49 -4
 								-20 -12 -38 -15 -51 -10 -14 5 -28 0 -48 -16 -16 -13 -42 -24 -58 -24 -25 0
-								-29 4 -29 29 0 20 -8 35 -22 45 -25 18 -23 18 -61 3z"/>
+								-29 4 -29 29 0 20 -8 35 -22 45 -25 18 -23 18 -61 3z"/></a>
 
 
 
-
+								<a href="subpage.jsp?loc=Gyungbuk">
 								<path id="gbuk" d="M5900 5088 c-32 -12 -35 -15 -22 -31 15 -18 -5 -95 -27 -99 -9 -2
 								-38 5 -65 15 -34 13 -52 15 -59 8 -6 -6 -19 -11 -29 -11 -9 0 -22 -8 -27 -19
 								-6 -10 -44 -38 -85 -61 -66 -38 -78 -49 -92 -86 -15 -40 -15 -46 -1 -67 14
@@ -456,12 +462,12 @@
 								-49 47 4 19 -2 26 -29 37 -21 9 -35 23 -38 37 -16 77 -15 84 12 116 24 29 30
 								31 54 22 19 -7 29 -7 34 0 7 13 8 12 -43 32 -37 14 -43 15 -54 1 -10 -12 -25
 								-14 -73 -9 -34 3 -74 11 -89 17 -23 9 -30 8 -42 -8 -11 -15 -18 -17 -32 -8
-								-10 6 -19 20 -21 30 -5 30 -63 63 -92 52z"/>
+								-10 6 -19 20 -21 30 -5 30 -63 63 -92 52z"/></a>
 
 
 
 
-
+								<a href="subpage.jsp?loc=Gyungnam">
 								<path id="cndska" d="M3200 5055 c0 -3 6 -14 12 -25 11 -16 9 -22 -7 -34 -19 -14 -19 -15
 								-2 -33 19 -22 23 -43 7 -43 -5 0 -10 -12 -10 -27 0 -16 -6 -48 -14 -72 -13
 								-44 -13 -44 -19 -15 -3 16 -1 33 4 39 19 19 10 61 -16 75 -17 9 -25 22 -25 41
@@ -496,7 +502,7 @@
 								<path d="M2947 4423 c-4 -21 1 -35 19 -54 15 -15 24 -37 24 -56 0 -16 3 -58 6
 								-91 l7 -61 45 -16 c25 -8 49 -15 54 -15 4 0 8 27 8 59 0 50 -4 65 -26 91 -15
 								17 -24 34 -21 37 4 3 -3 17 -13 31 -25 32 -25 46 0 39 32 -8 23 10 -17 38 -50
-								34 -79 33 -86 -2z"/>
+								34 -79 33 -86 -2z"/></a>
 
 
 
@@ -507,12 +513,12 @@
 
 
 
-								
+								<a href="subpage.jsp?loc=Deajeon">
 								<path id="sj" d="M4200 4179 c0 -17 -6 -37 -14 -43 -22 -17 -36 -178 -18 -211 l13 -26
 								21 26 21 27 29 -51 c29 -50 58 -67 58 -35 0 9 9 28 19 43 11 14 24 51 30 81 6
 								30 14 66 17 79 6 21 4 23 -14 19 -17 -5 -23 -1 -28 19 -4 16 -2 28 7 34 11 7
 								10 9 -4 9 -11 0 -21 -9 -24 -20 -3 -11 -11 -20 -18 -20 -6 0 -22 9 -35 20 -13
-								11 -27 20 -32 20 -4 0 -8 11 -8 24 0 14 -4 28 -10 31 -6 4 -10 -7 -10 -26z"/>
+								11 -27 20 -32 20 -4 0 -8 11 -8 24 0 14 -4 28 -10 31 -6 4 -10 -7 -10 -26z"/></a>
 
 
 
@@ -529,7 +535,7 @@
 
 
 
-
+								<a href="subpage.jsp?loc=Jeonbuk">
 								<path id="jeonbuk" d="M3749 3712 l-127 -16 -13 -45 -14 -46 -90 -17 c-49 -10 -91 -17 -92
 								-18 -2 0 -3 -6 -3 -14 0 -8 -12 -17 -27 -21 -16 -3 -39 -15 -52 -26 -22 -18
 								-23 -21 -7 -37 9 -10 16 -26 16 -34 0 -43 5 -44 110 -33 55 6 100 8 100 4 0
@@ -551,7 +557,7 @@
 								-62 -4 -45 -19 -46 -19 -89 1 -24 10 -48 26 -52 34 -12 21 -41 17 -67 -11 -33
 								-35 -111 -50 -175 -32 -41 11 -49 17 -47 33 2 14 -6 24 -22 32 -13 6 -36 31
 								-51 56 -31 53 -51 63 -79 38 -14 -13 -58 -26 -128 -39 l-108 -20 0 49 c0 26
-								-3 47 -7 47 -5 -1 -65 -9 -134 -17z"/>
+								-3 47 -7 47 -5 -1 -65 -9 -134 -17z"/></a>
 
 
 
@@ -564,20 +570,20 @@
 
 
 
-
+								<a href="subpage.jsp?loc=Deagu">
 								<path id="deagu" d="M5688 3555 c-37 -8 -72 -16 -77 -20 -6 -3 -8 -27 -5 -53 l6 -47 -43
 								-18 c-42 -17 -43 -17 -66 5 l-23 21 -15 -36 c-19 -45 -19 -46 1 -68 15 -17 15
 								-22 -5 -69 -20 -46 -20 -52 -6 -79 23 -45 19 -61 -15 -67 -36 -8 -37 -15 -9
 								-54 14 -18 20 -37 16 -50 -4 -17 -2 -20 11 -15 9 3 39 9 66 12 l48 6 -5 34
 								c-4 20 -2 33 5 33 6 0 8 13 6 31 -4 27 0 32 32 49 33 17 40 17 56 5 40 -30 60
 								-19 84 45 13 33 29 60 36 60 16 0 19 16 4 25 -13 8 11 54 40 78 14 12 19 24
-								15 35 -4 9 -12 42 -17 72 -9 55 -28 81 -57 79 -9 0 -46 -7 -83 -14z"/>
+								15 35 -4 9 -12 42 -17 72 -9 55 -28 81 -57 79 -9 0 -46 -7 -83 -14z"/></a>
 
 
 
 
 
-
+								<a href="subpage.jsp?loc=Gyungnam">
 								<path id="gnam" d="M4835 3350 c-13 -19 -38 -37 -70 -49 -39 -14 -54 -26 -67 -54 -10
 								-20 -31 -43 -47 -53 -23 -14 -31 -27 -36 -63 -4 -25 -22 -83 -40 -129 -33 -82
 								-36 -112 -10 -112 19 0 38 -64 30 -99 -4 -21 -2 -30 9 -34 26 -10 19 -60 -12
@@ -613,7 +619,7 @@
 								34 10 0 6 -6 10 -14 10 -30 0 -35 24 -11 53 22 28 23 29 54 13 17 -9 31 -15
 								31 -13 0 2 -7 25 -16 51 -16 46 -16 48 5 62 28 20 27 34 -4 34 -30 0 -29 -2
 								-9 45 14 35 14 39 0 47 -17 10 -22 63 -6 73 17 10 -1 35 -26 35 -18 0 -24 -5
-								-24 -23z"/>
+								-24 -23z"/></a>
 
 
 
@@ -625,24 +631,20 @@
 
 
 
-
+								<a href="subpage.jsp?loc=Ulsan">
 								<path id="ulsan" d="M6285 3083 c-22 -9 -41 -18 -43 -19 -2 -1 2 -12 8 -24 15 -28 -2 -50
 								-39 -50 -29 0 -65 -31 -75 -66 -8 -26 26 -59 70 -68 43 -9 194 -150 187 -175
 								-4 -15 3 -20 32 -25 25 -5 39 -15 47 -32 16 -34 38 -30 72 12 26 32 28 41 22
 								87 -5 44 -2 55 16 74 12 13 31 23 43 23 17 0 25 12 43 68 30 92 29 122 -2 122
 								-13 0 -43 7 -67 15 -39 14 -47 14 -82 0 -24 -10 -51 -13 -69 -10 -26 6 -28 10
 								-23 35 7 33 4 36 -55 43 -30 4 -59 0 -85 -10z"/>
+								</a>
 
 
 
 
 
 
-
-
-
-
-								<path d="M5601 3014 c0 -11 3 -14 6 -6 3 7 2 16 -1 19 -3 4 -6 -2 -5 -13z"/>
 
 
 
@@ -657,6 +659,8 @@
 								35 133 53 3 9 12 34 21 54 l16 36 -43 25 c-23 14 -53 37 -66 51 -24 26 -42 32
 								-54 19z"/>
 								</a>
+								
+								
 
 
 
@@ -702,7 +706,7 @@
 
 
 
-
+								<a href="subpage.jsp?loc=Jeonnam">
 								<path id="jeonnam" d="M3583 2783 c-19 -4 -20 -8 -12 -35 5 -18 8 -32 6 -33 -1 0 -14 -6
 								-29 -12 -17 -8 -28 -22 -33 -42 -6 -28 -13 -33 -78 -52 -40 -12 -93 -24 -119
 								-27 -46 -4 -48 -3 -48 20 0 14 7 45 15 68 15 42 15 42 -8 35 -12 -4 -63 -14
@@ -826,7 +830,7 @@
 								26 -58 17 0 27 41 14 56 -5 7 -7 24 -3 38 5 20 2 26 -10 26 -9 0 -17 -3 -17
 								-7z"/>
 								<path d="M3223 1001 c-22 -19 -22 -20 -5 -42 l19 -22 51 29 50 28 -36 13 c-48
-								16 -53 16 -79 -6z"/>
+								16 -53 16 -79 -6z"/></a>
 
 
 
@@ -836,8 +840,129 @@
 								
 								</g>
 							</svg>
+							
+							
+							<ul class="test22">
+								<li class="test111" style="color:rgb(1, 32, 32);"><div style="border: 15px solid rgb(1, 32, 32);"></div> 일일 확진자수 100 이상</li>
+								<li class="test2222" style="color:rgb(15, 107, 109);"><div style="border: 15px solid rgb(15, 107, 109);"></div> 일일 확진자수 100 미만</li>
+								<li class="test3333" style="color:rgb(23, 179, 182);"><div style="border: 15px solid rgb(23, 179, 182);"></div> 일일 확진자수 10 미만</li>
+							</ul>
+							
+							<ul class="test">
+								<li class="test1"><div><span>확진자수<br><%=covid_Gw.getConfirmedPatient() %></span></div></li>
+								<li class="test2"><div><span>해외유입<br><%=covid_Gw.getForeignImport() %></span></div></li>
+								<li class="test3"><div><span>격리환자<br><%=covid_Gw.getInQuarantine() %></span></div></li>
+								<li class="test4"><div><span>격리헤제<br><%=covid_Gw.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="gw_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Gw.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Gw.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Gw.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Gw.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="bu_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Bu.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Bu.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Bu.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Bu.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="se_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Se.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Se.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Se.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Se.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="je_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Je.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Je.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Je.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Je.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							
+							
+							<ul class="jn_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Jn.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Jn.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Jn.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Jn.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="jb_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Jb.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Jb.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Jb.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Jb.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="cn_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Cn.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Cn.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Cn.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Cn.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="cb_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Cb.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Cb.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Cb.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Cb.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="je_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Je.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Je.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Je.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Je.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="gn_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Gn.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Gn.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Gn.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Gn.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="gb_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Gb.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Gb.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Gb.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Gb.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="ga_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Ga.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Ga.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Ga.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Ga.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="gg_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Gg.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Gg.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Gg.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Gg.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="us_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Us.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Us.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Us.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Us.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="ic_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Ic.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Ic.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Ic.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Ic.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="dg_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Dg.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Dg.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Dg.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Dg.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+							<ul class="dj_info test">
+								<li class="covid_info test1"><div><span>확진자수<br><%=covid_Dj.getConfirmedPatient() %></span></div></li>
+								<li class="covid_info test2"><div><span>해외유입<br><%=covid_Dj.getForeignImport() %></span></div></li>
+								<li class="covid_info test3"><div><span>격리환자<br><%=covid_Dj.getInQuarantine() %></span></div></li>
+								<li class="covid_info test4"><div><span>격리헤제<br><%=covid_Dj.getReleaseFromQuarantine() %></span></div></li>
+							</ul>
+			
+							
+							
 						</section>
-						<nav>
+						<%-- <nav>
 							<ul class="defalt_info info">
 								<li class="covid_info covid_info1"><div></div></li>
 								<li class="covid_info covid_info2"><div></div></li>
@@ -868,7 +993,7 @@
 								<li class="covid_info covid_info3"><div><span>격리환자<br><%=covid_Je.getInQuarantine() %></span></div></li>
 								<li class="covid_info covid_info4"><div><span>격리헤제<br><%=covid_Je.getReleaseFromQuarantine() %></span></div></li>
 							</ul>
-						</nav>
+						</nav> --%>
 					</header>
 
 					
@@ -889,26 +1014,74 @@
 		<script>
 			$(function () {
     
-				$("#gwangju").mouseover(function(){
-					$(".info").css({display: 'none'});
-					$(".gw_info").css({display: 'block'});
-					$(".covid_info").css({animationDelay: '0!important'});
-				});
+				
 				$("#seoul").mouseover(function(){
-					$(".info").css({display: 'none'});
+					$(".test").css({display: 'none'});
 					$(".se_info").css({display: 'block'});
-					$(".covid_info").css({animationDelay: '0!important'});
 				});
 				$("#busan").mouseover(function(){
-					$(".info").css({display: 'none'});
+					$(".test").css({display: 'none'});
 					$(".bu_info").css({display: 'block'});
-					$(".covid_info").css({animationDelay: '0!important'});
 				});
 				$("#jeju").mouseover(function(){
-					$(".info").css({display: 'none'});
+					$(".test").css({display: 'none'});
 					$(".je_info").css({display: 'block'});
-					$(".covid_info").css({animationDelay: '0!important'});
 				});
+				$("#gwangju").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".gw_info").css({display: 'block'}); 
+				});
+				
+				$("#jeonnam").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".jn_info").css({display: 'block'}); 
+				});
+				$("#jeonbuk").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".jb_info").css({display: 'block'}); 
+				});
+				$("#gnam").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".gn_info").css({display: 'block'}); 
+				});
+				$("#gbuk").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".gb_info").css({display: 'block'}); 
+				});
+				$("#cndska").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".cn_info").css({display: 'block'}); 
+				});
+				$("#cnfqnr").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".cb_info").css({display: 'block'}); 
+				});
+				$("#gangwon").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".ga_info").css({display: 'block'}); 
+				});
+				$("#gg").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".gg_info").css({display: 'block'}); 
+				});
+				$("#ulsan").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".us_info").css({display: 'block'}); 
+				});
+				$("#inc").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".ic_info").css({display: 'block'}); 
+				});
+				$("#deagu").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".dg_info").css({display: 'block'}); 
+				});
+				$("#sj").mouseover(function(){
+					$(".test").css({display: 'none'});
+					$(".dj_info").css({display: 'block'}); 
+				});
+				
+				
 			}); 
 			
 
