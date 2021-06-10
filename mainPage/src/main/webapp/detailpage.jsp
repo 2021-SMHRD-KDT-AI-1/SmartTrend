@@ -13,20 +13,29 @@
 -->
 
 <%
-			int index = Integer.parseInt(request.getParameter("index")); 			
-
-			positiveFoodListDAO dao1 = new positiveFoodListDAO();
-			ArrayList<positiveVO> listFood = dao1.positiveFoodList();
+			int index = Integer.parseInt(request.getParameter("index"));
 			
-			positiveHotelListDAO dao2 = new positiveHotelListDAO();
-			ArrayList<positiveVO> listHotel = dao2.positiveHotelList();
 			
-			PositiveattractionlistDAO dao3 = new PositiveattractionlistDAO();
-			ArrayList<positiveVO> listattraction = dao3.address();
-
+			double locationX[] = new double[5];
+			double locationY[] = new double[5];
+			
+			locationX[0] = 35.15439714024425;
+			locationY[0] = 126.90131769024425;
+					
+			
+			if(index==0) {
+			positiveFoodListDAO dao = new positiveFoodListDAO();
+			ArrayList<positiveVO> list = dao.positiveFoodList();
+			} else if(index==1) {
 			positiveHotelListDAO dao = new positiveHotelListDAO();
 			ArrayList<positiveVO> list = dao.positiveHotelList();
-			
+			} else if(index==2) {
+			PositiveattractionlistDAO dao = new PositiveattractionlistDAO();
+			ArrayList<positiveVO> list = dao.address();
+			} else if(index==3) {
+			positiveHotelListDAO dao = new positiveHotelListDAO();
+			ArrayList<positiveVO> list = dao.positiveHotelList();
+			}
 			
 			
 			
@@ -61,16 +70,18 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major"><%=listFood.get(index).getName()%></h1>
+							<h1 class="major"><%=list.get(index).getName()%></h1>
 							<span class="image fit"><img src="trip/images/pic04.jpg" alt="" /></span>
 							<p>링크</p>
 							<p>지도</p>
-							<p><%=listFood.get(index).getName()%></p>
+							<p><%=list.get(index).getName()%></p>
 							<div id="map" style="width:1040px;height: 388px;"></div>
 							<script>
 							var HOME_PATH = window.HOME_PATH || '.';
 			                //지도 생성
-			                var gwangju = new naver.maps.LatLng(35.15439714024425, 126.87611635389719),
+			                let locX = <%=locationX[index] %>;
+			                let locY = <%=locationY[index] %>;
+			                var gwangju = new naver.maps.LatLng(locX, locY),
 			                    map = new naver.maps.Map('map', {
 			                    	//지도의 중심좌표
 			                        center: gwangju.destinationPoint(50, 50),
@@ -83,8 +94,8 @@
 			                });
 		                	var contentString = [
 		                        '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
-		                        '<center><h4 style="color : #000000"><%=listFood.get(index).getName()%></h4></center>',
-		                        '<p><%=listFood.get(index).getAddress()%></P>',
+		                        '<center><h4 style="color : #000000"><%=list.get(index).getName()%></h4></center>',
+		                        '<p><%=list.get(index).getAddress()%></P>',
 		                        '</div>'
 		                    	].join('');
 
