@@ -145,7 +145,7 @@
 									<p><%=listattraction.get(i).getCount() %></p>
 									
 									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									 <ul class="actions"><img src="images/foodMain/rayMain.jpg" alt="" data-position="center center" /> 
+									 
 										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %> "class="button">Learn more</a></li>
 									</ul>
 								</div>

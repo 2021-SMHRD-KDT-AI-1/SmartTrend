@@ -31,6 +31,12 @@ public class positiveHotelListDAO {
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()) { // next() : 결과행이 존재할때 true, 커서 이동
 				positiveVO vo = new positiveVO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4));
+				String name = rs.getString(1);
+				if(name.equals("더블유라운지호텔")) {
+					vo.setFile("images/hotelMain/wloungeMain.jpg");
+				}
+				
+				
 				list.add(vo);
 			}
 			rs.close();
