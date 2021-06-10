@@ -5,6 +5,7 @@ public class positiveVO {
 	private String address;
 	private String tel;
 	private String count;
+	private String file;
 	
 	public positiveVO(String name, String address, String tel, String count) {
 		super();
@@ -50,6 +51,13 @@ public class positiveVO {
 		this.count = count;
 	}
 	
+	public String getFile() {
+		return file;
+	}
+
+	public void setFile(String file) {
+		this.file = file;
+	}
 	
 	
 }
