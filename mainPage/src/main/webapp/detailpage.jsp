@@ -46,7 +46,7 @@ ArrayList<positiveVO> list = dao.positiveHotelList();
 			
 			
 			
->>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-1/SmartTrend.git
+
 %>
 <html lang="ko">
 	<head>
