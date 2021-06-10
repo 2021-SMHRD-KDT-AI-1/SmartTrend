@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 <%@page import="com.DAO.PositiveattractionlistDAO"%>
 <%@page import="com.DAO.positiveFoodListDAO"%>
+>>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-1/SmartTrend.git
 <%@page import="com.VO.positiveVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.DAO.positiveHotelListDAO"%>
@@ -13,6 +16,10 @@
 -->
 
 <%
+<<<<<<< HEAD
+positiveHotelListDAO dao = new positiveHotelListDAO();
+ArrayList<positiveVO> list = dao.positiveHotelList();
+=======
 			int index = Integer.parseInt(request.getParameter("index"));
 			
 			
@@ -39,6 +46,7 @@
 			
 			
 			
+>>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-1/SmartTrend.git
 %>
 <html lang="ko">
 	<head>
@@ -74,6 +82,45 @@
 							<span class="image fit"><img src="trip/images/pic04.jpg" alt="" /></span>
 							<p>링크</p>
 							<p>지도</p>
+<<<<<<< HEAD
+							<p><%=list.get(0).getName()%></p>
+							<div id="map" style="width:1040px;height: 388px;"></div>
+							<script>
+							var HOME_PATH = window.HOME_PATH || '.';
+			                //지도 생성
+			                var gwangju = new naver.maps.LatLng(35.14496693139039, 126.91577035574662),
+			                    map = new naver.maps.Map('map', {
+			                    	//지도의 중심좌표
+			                        center: gwangju.destinationPoint(100, 100),
+			                      	//지도의 확대 레벨
+			                        zoom: 17
+			                    });
+			                	marker = new naver.maps.Marker({
+			                    position: gwangju,
+			                    map: map
+			                });
+		                	var contentString = [
+		                        '<div class="iw_inner" style="box-sizing: border-box; color : #000000">',
+		                        '<center><h4 style="color : #000000"><%=list.get(0).getName()%></h4></center>',
+		                        '<p><%=list.get(1).getAddress()%></P>',
+		                        '</div>'
+		                    	].join('');
+
+			                var infowindow = new naver.maps.InfoWindow({
+			                    content: contentString
+			              		 });
+
+			                naver.maps.Event.addListener(marker, "click", function(e) {
+			                    if (infowindow.getMap()) {
+			                        infowindow.close();
+			                    } else {
+			                        infowindow.open(map, marker);
+			                    }
+			                });
+
+			                infowindow.open(map, marker);
+                        	</script>
+=======
 							<p><%=list.get(index).getName()%></p>
 							<div id="map" style="width:1040px;height: 388px;"></div>
 							<script>
@@ -114,9 +161,13 @@
 			                infowindow.open(map, marker);
                         	</script>
                         	
+>>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-1/SmartTrend.git
 						</div>
 					</section>
+<<<<<<< HEAD
+=======
 					
+>>>>>>> branch 'main' of https://github.com/2021-SMHRD-KDT-AI-1/SmartTrend.git
 				</div>
 
 		<!-- Footer -->

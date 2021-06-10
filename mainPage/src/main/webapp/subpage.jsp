@@ -95,7 +95,7 @@
 
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights fade-up sectionM">
-						<div class="inner">
+						<div  class="inner">
 							<h1>¸ÀÁý</h1>
 							<p>Just another fine responsive site template designed by <a href="http://html5up.net">HTML5 UP</a><br />
 							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p>
@@ -105,7 +105,7 @@
 						</div>
 						<% for (int i=0; i<listFood.size(); i++) { %>
 						<section>
-							<a href="#" class="image"><img src="images/foodMain/Main"+<%=i>+".jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="<%=listFood.get(i).getFile() %>" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2><%=listFood.get(i).getName() %></h2>
@@ -119,6 +119,7 @@
 							</div>
 						</section>
 						<%} %>
+						
 					</section>
 
 				<!-- Two -->
@@ -134,7 +135,7 @@
 						</div>
 						<% for (int i=0; i<listattraction.size(); i++) { %>
 						<section>
-							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="<%=listattraction.get(i).getFile() %>" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2><%=listattraction.get(i).getName()%></h2>
@@ -143,7 +144,6 @@
 									<p><%=listattraction.get(i).getCount() %></p>
 									
 									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
 										<li><a href="detailpage.jsp?index=<%=Integer.toString(i) %> "class="button">Learn more</a></li>
 									</ul>
 								</div>
@@ -164,7 +164,7 @@
 						</div>
 						<% for (int i=0; i<listHotel.size(); i++) { %>
 						<section>
-							<a href="#" class="image"><img src="trip/images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="<%=listHotel.get(i).getFile() %>" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2><%=listHotel.get(i).getName()%></h2>
