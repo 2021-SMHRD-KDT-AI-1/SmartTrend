@@ -179,7 +179,7 @@
 %>
 <html lang="ko">
 	<head>
-		<title>Generic - Hyperspace by HTML5 UP</title>
+		<title>Smart Trend/detailpage</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="trip/assets/css/main.css" />
@@ -212,14 +212,16 @@
 							<h1 class="major"><%=list.get(index).getName()%></h1>
 							<span class="image fit"><img src=<%=image[index] %> alt="" /></span><br>
 							<div class="hdfsj">
-								<div style="width:500px; height:300px; display: inline-block; overflow: hidden; margin-right:100px;">
-								
-								<span class="image fit"><img src=<%=image2[index] %> alt="" /></span>
-								
+								<div style="width:30%; height:300px; display: inline-block; overflow: hidden;">
+									<span class="image fit"><img style="width:100%;" src=<%=image2[index] %> alt="" /></span>
 								</div>
-								<div style="width:500px; height:300px;  display: inline-block; overflow: hidden;">
-								<span class="image fit"><img style="width:500px" src=<%=image3[index] %> alt="" /></span>
 								
+								<div style="width:30%; height:300px;  display: inline-block; overflow: hidden;">
+									<span class="image fit"><img style="width:100%;" src=<%=image3[index+1] %> alt="" /></span>
+								</div>
+								
+								<div style="width:30%; height:300px;  display: inline-block; overflow: hidden;">
+									<span class="image fit"><img style="width:100%;" src=<%=image3[index] %> alt="" /></span>
 								</div>
 							</div>
 							<br>
