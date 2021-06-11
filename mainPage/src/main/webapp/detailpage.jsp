@@ -212,15 +212,15 @@
 							<h1 class="major"><%=list.get(index).getName()%></h1>
 							<span class="image fit"><img src=<%=image[index] %> alt="" /></span><br>
 							<div class="hdfsj">
-								<div style="width:30%; height:300px; display: inline-block; overflow: hidden;">
+								<div style="width:30%; height:280px; display: inline-block; overflow: hidden;">
 									<span class="image fit"><img style="width:100%;" src=<%=image2[index] %> alt="" /></span>
 								</div>
 								
-								<div style="width:30%; height:300px;  display: inline-block; overflow: hidden;">
+								<div style="width:30%; height:280px;  display: inline-block; overflow: hidden;">
 									<span class="image fit"><img style="width:100%;" src=<%=image3[index+1] %> alt="" /></span>
 								</div>
 								
-								<div style="width:30%; height:300px;  display: inline-block; overflow: hidden;">
+								<div style="width:30%; height:280px;  display: inline-block; overflow: hidden;">
 									<span class="image fit"><img style="width:100%;" src=<%=image3[index] %> alt="" /></span>
 								</div>
 							</div>
